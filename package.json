@@ -1,0 +1,13 @@
+{
+  "name": "obsero-website",
+  "version": "1.0.0",
+  "description": "Obsero - Modern Compliance Training",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "npx serve ."
+  },
+  "keywords": ["compliance", "training", "scorm", "e-learning"],
+  "author": "Obsero",
+  "license": "MIT"
+}
