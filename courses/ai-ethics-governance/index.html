@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ethics & Governance Training | Obsero</title>
+    <meta name="description" content="Learn AI ethics, governance frameworks, and compliance requirements including the EU AI Act. Build responsible AI practices in your organization.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">AI Ethics & Governance</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list"></nav>
+        </aside>
+
+        <main class="course-main">
+            <div class="module-header"></div>
+            <div class="content-area"></div>
+        </main>
+
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        course = new ObseroCourse({
+            courseId: 'ai-ethics-governance',
+            courseTitle: 'AI Ethics & Governance',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: Introduction to AI Ethics
+                // ========================================
+                {
+                    title: 'Introduction to AI Ethics',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to AI Ethics & Governance',
+                            content: `
+                                <p>Artificial Intelligence is transforming how businesses operate. With this power comes responsibility—and increasingly, <strong>legal requirements</strong>.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 40 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>Why AI ethics matters for business</li>
+                                    <li>Key regulations: EU AI Act, NIST AI RMF, and more</li>
+                                    <li>Identifying and mitigating AI risks</li>
+                                    <li>Bias, fairness, and transparency requirements</li>
+                                    <li>Your role in responsible AI development and use</li>
+                                </ul>
+
+                                <h4>Why This Matters Now</h4>
+                                <p>The <strong>EU AI Act</strong> is now law—the world's first comprehensive AI regulation. Companies operating in the EU (or serving EU customers) must comply. Other jurisdictions are following.</p>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Penalties:</strong> EU AI Act violations can result in fines up to <strong>€35 million or 7% of global annual revenue</strong>—whichever is higher.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act Official Text',
+                                    url: 'https://artificialintelligenceact.eu/',
+                                    org: 'European Union'
+                                },
+                                {
+                                    title: 'NIST AI Risk Management Framework',
+                                    url: 'https://www.nist.gov/itl/ai-risk-management-framework',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is AI Ethics?',
+                            content: `
+                                <p><strong>AI Ethics</strong> is the study of moral issues and responsible decision-making in the design, development, deployment, and use of AI systems.</p>
+
+                                <h4>Core Principles of AI Ethics</h4>
+                                <ul>
+                                    <li><strong>Fairness:</strong> AI systems should not discriminate or create unfair outcomes</li>
+                                    <li><strong>Transparency:</strong> People should understand how AI decisions are made</li>
+                                    <li><strong>Accountability:</strong> Humans must be responsible for AI outcomes</li>
+                                    <li><strong>Privacy:</strong> AI must respect data protection rights</li>
+                                    <li><strong>Safety:</strong> AI systems should not cause harm</li>
+                                    <li><strong>Human Oversight:</strong> Humans should maintain control over AI systems</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Key Point:</strong> AI ethics isn't just philosophy—it's now encoded in law. The EU AI Act, NIST frameworks, and industry standards all require these principles.
+                                    </div>
+                                </div>
+
+                                <h4>Why Companies Care</h4>
+                                <ul>
+                                    <li><strong>Legal compliance:</strong> Regulations require ethical AI practices</li>
+                                    <li><strong>Reputation:</strong> AI failures make headlines and damage trust</li>
+                                    <li><strong>Customer demands:</strong> Enterprise buyers require AI governance</li>
+                                    <li><strong>Risk management:</strong> Unethical AI creates legal and financial liability</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Ethics Guidelines for Trustworthy AI',
+                                    url: 'https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai',
+                                    org: 'European Commission'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'AI Governance Explained',
+                            content: `
+                                <p><strong>AI Governance</strong> is the framework of policies, processes, and controls that organizations use to manage AI systems responsibly throughout their lifecycle.</p>
+
+                                <h4>Key Components of AI Governance</h4>
+
+                                <p><strong>1. AI Inventory & Classification</strong></p>
+                                <ul>
+                                    <li>What AI systems do we use or build?</li>
+                                    <li>How are they classified by risk level?</li>
+                                    <li>Who is responsible for each system?</li>
+                                </ul>
+
+                                <p><strong>2. Risk Assessment</strong></p>
+                                <ul>
+                                    <li>What could go wrong?</li>
+                                    <li>Who could be harmed?</li>
+                                    <li>What controls mitigate risks?</li>
+                                </ul>
+
+                                <p><strong>3. Policies & Standards</strong></p>
+                                <ul>
+                                    <li>Acceptable use policies</li>
+                                    <li>Development standards</li>
+                                    <li>Procurement requirements</li>
+                                </ul>
+
+                                <p><strong>4. Oversight & Monitoring</strong></p>
+                                <ul>
+                                    <li>Ongoing performance monitoring</li>
+                                    <li>Bias and drift detection</li>
+                                    <li>Incident response procedures</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>Good Governance = Trust:</strong> Organizations with strong AI governance can move faster because they've built the guardrails to innovate responsibly.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AI Risk Management Framework',
+                                    url: 'https://www.nist.gov/itl/ai-risk-management-framework',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following is NOT one of the core principles of AI ethics?',
+                            options: [
+                                'Fairness — AI should not discriminate',
+                                'Profitability — AI should maximize revenue',
+                                'Transparency — People should understand AI decisions',
+                                'Accountability — Humans must be responsible for AI outcomes'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'While profitability may be a business goal, it is not a core principle of AI ethics. The core principles focus on fairness, transparency, accountability, privacy, safety, and human oversight—ensuring AI benefits people without causing harm.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: AI Regulations & Frameworks
+                // ========================================
+                {
+                    title: 'AI Regulations & Frameworks',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'The Global AI Regulatory Landscape',
+                            content: `
+                                <p>AI regulation is evolving rapidly. Here's what you need to know:</p>
+
+                                <h4>🇪🇺 European Union: AI Act</h4>
+                                <p>The world's first comprehensive AI law. Applies to any organization offering AI products or services to EU residents.</p>
+                                <ul>
+                                    <li><strong>Effective:</strong> Phased implementation 2024-2027</li>
+                                    <li><strong>Approach:</strong> Risk-based classification system</li>
+                                    <li><strong>Penalties:</strong> Up to €35M or 7% of global revenue</li>
+                                </ul>
+
+                                <h4>🇺🇸 United States</h4>
+                                <p>Sector-specific approach with federal guidance:</p>
+                                <ul>
+                                    <li><strong>NIST AI RMF:</strong> Voluntary framework for AI risk management</li>
+                                    <li><strong>Executive Order 14110:</strong> Federal AI safety requirements</li>
+                                    <li><strong>State laws:</strong> Colorado, California, and others passing AI laws</li>
+                                </ul>
+
+                                <h4>🇨🇦 Canada</h4>
+                                <ul>
+                                    <li><strong>AIDA:</strong> Artificial Intelligence and Data Act (proposed)</li>
+                                    <li><strong>PIPEDA:</strong> Privacy law applies to AI processing personal data</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">🌍</span>
+                                    <div>
+                                        <strong>Important:</strong> If you operate globally, you likely need to comply with multiple regulatory frameworks. The EU AI Act has extraterritorial reach—similar to GDPR.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act',
+                                    url: 'https://artificialintelligenceact.eu/',
+                                    org: 'European Union'
+                                },
+                                {
+                                    title: 'Executive Order on AI Safety',
+                                    url: 'https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/',
+                                    org: 'White House'
+                                },
+                                {
+                                    title: 'NIST AI RMF',
+                                    url: 'https://www.nist.gov/itl/ai-risk-management-framework',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'EU AI Act: Risk Categories',
+                            content: `
+                                <p>The EU AI Act classifies AI systems into four risk categories:</p>
+
+                                <h4>🚫 Unacceptable Risk (Prohibited)</h4>
+                                <p>These AI applications are <strong>banned</strong> in the EU:</p>
+                                <ul>
+                                    <li>Social scoring by governments</li>
+                                    <li>Real-time biometric surveillance (with exceptions)</li>
+                                    <li>Manipulation of vulnerable groups</li>
+                                    <li>Emotion recognition in workplaces/schools (with exceptions)</li>
+                                </ul>
+
+                                <h4>⚠️ High Risk</h4>
+                                <p>Strict requirements apply—documentation, testing, human oversight:</p>
+                                <ul>
+                                    <li>Employment/HR decisions (hiring, performance, termination)</li>
+                                    <li>Credit scoring and financial services</li>
+                                    <li>Education and training assessment</li>
+                                    <li>Critical infrastructure</li>
+                                    <li>Law enforcement and border control</li>
+                                    <li>Healthcare and medical devices</li>
+                                </ul>
+
+                                <h4>⚡ Limited Risk</h4>
+                                <p>Transparency requirements (users must know they're interacting with AI):</p>
+                                <ul>
+                                    <li>Chatbots and virtual assistants</li>
+                                    <li>Deepfakes and synthetic content</li>
+                                    <li>Emotion recognition (where permitted)</li>
+                                </ul>
+
+                                <h4>✅ Minimal Risk</h4>
+                                <p>No specific requirements (voluntary codes of conduct):</p>
+                                <ul>
+                                    <li>AI-enabled video games</li>
+                                    <li>Spam filters</li>
+                                    <li>Most productivity tools</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act Risk Classification',
+                                    url: 'https://artificialintelligenceact.eu/high-level-summary/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Under the EU AI Act, which of these AI applications would be classified as "High Risk"?',
+                            options: [
+                                'A spam filter for email',
+                                'An AI system that screens job applicants',
+                                'An AI-powered video game',
+                                'A chatbot that answers customer questions'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'AI systems used in employment decisions (hiring, performance evaluation, termination) are classified as high-risk under the EU AI Act. They require comprehensive documentation, risk assessment, human oversight, and conformity assessment before deployment.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'NIST AI Risk Management Framework',
+                            content: `
+                                <p>The <strong>NIST AI Risk Management Framework (AI RMF)</strong> is the U.S. standard for managing AI risks. While voluntary, it's increasingly expected by customers and partners.</p>
+
+                                <h4>The Four Core Functions</h4>
+
+                                <p><strong>1. GOVERN</strong></p>
+                                <p>Establish and maintain AI governance:</p>
+                                <ul>
+                                    <li>Define roles and responsibilities</li>
+                                    <li>Create policies and procedures</li>
+                                    <li>Build organizational culture</li>
+                                </ul>
+
+                                <p><strong>2. MAP</strong></p>
+                                <p>Understand the context and identify risks:</p>
+                                <ul>
+                                    <li>Inventory AI systems</li>
+                                    <li>Identify stakeholders and impacts</li>
+                                    <li>Assess the AI system's context</li>
+                                </ul>
+
+                                <p><strong>3. MEASURE</strong></p>
+                                <p>Analyze and assess identified risks:</p>
+                                <ul>
+                                    <li>Evaluate AI system performance</li>
+                                    <li>Test for bias and errors</li>
+                                    <li>Monitor ongoing operations</li>
+                                </ul>
+
+                                <p><strong>4. MANAGE</strong></p>
+                                <p>Prioritize and act on risks:</p>
+                                <ul>
+                                    <li>Implement risk treatments</li>
+                                    <li>Document decisions</li>
+                                    <li>Communicate with stakeholders</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Tip:</strong> The NIST AI RMF aligns well with the EU AI Act requirements. Organizations using NIST are better positioned for EU compliance.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AI Risk Management Framework',
+                                    url: 'https://www.nist.gov/itl/ai-risk-management-framework',
+                                    org: 'NIST'
+                                },
+                                {
+                                    title: 'NIST AI RMF Playbook',
+                                    url: 'https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'General-Purpose AI & Foundation Models',
+                            content: `
+                                <p>The EU AI Act includes special rules for <strong>General-Purpose AI (GPAI)</strong> systems—like ChatGPT, Claude, and other large language models.</p>
+
+                                <h4>What is GPAI?</h4>
+                                <p>AI models trained on broad data that can perform a wide range of tasks, rather than being built for a specific purpose.</p>
+
+                                <h4>GPAI Requirements</h4>
+                                <p>All GPAI providers must:</p>
+                                <ul>
+                                    <li>Provide technical documentation</li>
+                                    <li>Comply with EU copyright law</li>
+                                    <li>Publish training data summaries</li>
+                                </ul>
+
+                                <h4>Systemic Risk GPAI</h4>
+                                <p>High-capability models (trained with >10^25 FLOPs) have additional requirements:</p>
+                                <ul>
+                                    <li>Model evaluations and testing</li>
+                                    <li>Systemic risk assessment</li>
+                                    <li>Incident tracking and reporting</li>
+                                    <li>Cybersecurity measures</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>For AI Users:</strong> Even if you don't build AI, you may need to document how you use GPAI tools and ensure they're appropriate for your use case—especially for high-risk applications.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act - GPAI Provisions',
+                                    url: 'https://artificialintelligenceact.eu/high-level-summary/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'AI System Classification',
+                            context: 'Your company is planning to deploy an AI tool that analyzes employee performance data to recommend promotions and identify underperformers. The Head of HR asks you: "Do we need to worry about any special compliance requirements?"',
+                            choices: [
+                                {
+                                    text: '"No, it\'s just an internal tool, so regulations don\'t apply"',
+                                    correct: false,
+                                    feedback: 'Incorrect. AI systems used for employment decisions (including performance evaluation and promotion recommendations) are classified as HIGH RISK under the EU AI Act, regardless of whether they\'re internal tools.'
+                                },
+                                {
+                                    text: '"Yes, this is likely high-risk AI under the EU AI Act—we need risk assessment, documentation, and human oversight"',
+                                    correct: true,
+                                    feedback: 'Correct! AI systems making or influencing employment decisions are classified as high-risk. You\'ll need comprehensive risk assessment, technical documentation, human oversight mechanisms, and potentially conformity assessment before deployment.'
+                                },
+                                {
+                                    text: '"Only if we\'re based in the EU"',
+                                    correct: false,
+                                    feedback: 'Incorrect. The EU AI Act has extraterritorial reach—it applies to organizations offering AI products or services to EU residents, or whose AI outputs are used in the EU, regardless of where the organization is based.'
+                                },
+                                {
+                                    text: '"It\'s fine as long as HR makes the final decision"',
+                                    correct: false,
+                                    feedback: 'Having human oversight is one requirement, but it\'s not sufficient alone. High-risk AI systems require comprehensive documentation, risk assessment, testing, and conformity assessment—human oversight is just one component.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: AI Risk Management
+                // ========================================
+                {
+                    title: 'AI Risk Management',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Types of AI Risks',
+                            content: `
+                                <p>AI systems can create various types of risks that need to be identified and managed:</p>
+
+                                <h4>1. Bias & Discrimination Risk</h4>
+                                <p>AI can perpetuate or amplify unfair biases:</p>
+                                <ul>
+                                    <li>Training data reflecting historical discrimination</li>
+                                    <li>Proxy variables that correlate with protected characteristics</li>
+                                    <li>Unequal performance across demographic groups</li>
+                                </ul>
+
+                                <h4>2. Safety & Security Risk</h4>
+                                <ul>
+                                    <li>Adversarial attacks that manipulate AI behavior</li>
+                                    <li>Model theft or extraction</li>
+                                    <li>Prompt injection in language models</li>
+                                    <li>Unintended harmful outputs</li>
+                                </ul>
+
+                                <h4>3. Privacy Risk</h4>
+                                <ul>
+                                    <li>Training data containing personal information</li>
+                                    <li>Model memorization of sensitive data</li>
+                                    <li>Inference attacks revealing private information</li>
+                                </ul>
+
+                                <h4>4. Reliability & Accuracy Risk</h4>
+                                <ul>
+                                    <li>Hallucinations (generating false information)</li>
+                                    <li>Performance degradation over time (model drift)</li>
+                                    <li>Failure in edge cases or unusual situations</li>
+                                </ul>
+
+                                <h4>5. Accountability Risk</h4>
+                                <ul>
+                                    <li>Unclear responsibility for AI decisions</li>
+                                    <li>Lack of audit trails</li>
+                                    <li>Inability to explain decisions</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AI Risk Categories - NIST AI RMF',
+                                    url: 'https://www.nist.gov/itl/ai-risk-management-framework',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'AI Risk Assessment Process',
+                            content: `
+                                <h4>Step 1: Identify</h4>
+                                <p>Document the AI system and its context:</p>
+                                <ul>
+                                    <li>What does the system do?</li>
+                                    <li>Who are the users and affected parties?</li>
+                                    <li>What decisions does it make or influence?</li>
+                                    <li>What data does it use?</li>
+                                </ul>
+
+                                <h4>Step 2: Assess</h4>
+                                <p>Evaluate potential risks:</p>
+                                <ul>
+                                    <li>What could go wrong?</li>
+                                    <li>How likely is each risk?</li>
+                                    <li>What would be the impact?</li>
+                                    <li>Who would be harmed?</li>
+                                </ul>
+
+                                <h4>Step 3: Mitigate</h4>
+                                <p>Implement controls to reduce risks:</p>
+                                <ul>
+                                    <li>Technical controls (testing, monitoring)</li>
+                                    <li>Procedural controls (human oversight, escalation)</li>
+                                    <li>Organizational controls (policies, training)</li>
+                                </ul>
+
+                                <h4>Step 4: Monitor</h4>
+                                <p>Ongoing oversight of AI systems:</p>
+                                <ul>
+                                    <li>Performance monitoring</li>
+                                    <li>Bias detection</li>
+                                    <li>Incident tracking</li>
+                                    <li>Regular reviews</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🔄</span>
+                                    <div>
+                                        <strong>Continuous Process:</strong> Risk assessment isn't one-and-done. AI systems change over time, and risks need to be reassessed regularly.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AI RMF Playbook',
+                                    url: 'https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'An AI system that worked well in testing starts performing poorly six months after deployment. What is this phenomenon called?',
+                            options: [
+                                'AI hallucination',
+                                'Model drift',
+                                'Bias amplification',
+                                'Adversarial attack'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'Model drift occurs when an AI system\'s performance degrades over time, usually because the real-world data it encounters differs from its training data. This is why ongoing monitoring is essential—AI systems need regular evaluation and potential retraining.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Human Oversight Requirements',
+                            content: `
+                                <p>Both the EU AI Act and NIST AI RMF emphasize <strong>human oversight</strong>—ensuring humans maintain meaningful control over AI systems.</p>
+
+                                <h4>Types of Human Oversight</h4>
+
+                                <p><strong>Human-in-the-Loop (HITL)</strong></p>
+                                <p>Human approves every AI decision before action.</p>
+                                <ul>
+                                    <li>Highest oversight level</li>
+                                    <li>Required for highest-risk decisions</li>
+                                    <li>Example: Doctor reviews AI diagnosis before treating</li>
+                                </ul>
+
+                                <p><strong>Human-on-the-Loop (HOTL)</strong></p>
+                                <p>Human monitors AI and can intervene.</p>
+                                <ul>
+                                    <li>AI operates autonomously within limits</li>
+                                    <li>Human can override or stop the system</li>
+                                    <li>Example: Fraud detection with human review of flagged cases</li>
+                                </ul>
+
+                                <p><strong>Human-in-Command (HIC)</strong></p>
+                                <p>Human sets objectives and boundaries; AI executes.</p>
+                                <ul>
+                                    <li>Broader oversight level</li>
+                                    <li>Human controls the overall system</li>
+                                    <li>Example: Setting rules for automated trading</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>EU AI Act Requirement:</strong> High-risk AI systems must be designed to allow effective human oversight, including the ability to understand, intervene, and override AI decisions.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act - Human Oversight',
+                                    url: 'https://artificialintelligenceact.eu/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'AI Output Review',
+                            context: 'You\'re using an AI tool to draft customer communications. The AI generates a response that looks reasonable, but you notice it includes a specific product claim you\'re not sure is accurate. You\'re busy with a deadline.',
+                            choices: [
+                                {
+                                    text: 'Send it anyway—the AI is usually accurate, and you\'re short on time',
+                                    correct: false,
+                                    feedback: 'This is a dangerous approach. AI systems can "hallucinate" false information confidently. Sending unverified claims could expose the company to legal liability for false advertising or breach of contract.'
+                                },
+                                {
+                                    text: 'Verify the claim before sending, even if it takes extra time',
+                                    correct: true,
+                                    feedback: 'Correct! Human oversight means verifying AI outputs before acting on them, especially for factual claims. This is exactly what responsible AI use looks like—the AI assists, but humans remain accountable.'
+                                },
+                                {
+                                    text: 'Remove the claim and send a shorter response',
+                                    correct: false,
+                                    feedback: 'While safer than sending unverified information, this might not be the best approach. The claim might be accurate and valuable. The right answer is to verify it—if true, include it; if false, remove it.'
+                                },
+                                {
+                                    text: 'Ask the AI to verify its own claim',
+                                    correct: false,
+                                    feedback: 'AI systems cannot reliably verify their own outputs. They may confidently repeat incorrect information. Human verification using authoritative sources is required.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Bias, Fairness & Transparency
+                // ========================================
+                {
+                    title: 'Bias, Fairness & Transparency',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Understanding AI Bias',
+                            content: `
+                                <p><strong>AI bias</strong> occurs when an AI system produces results that are systematically unfair to certain groups. This isn't about the AI being "prejudiced"—it's about patterns in data and design choices.</p>
+
+                                <h4>Sources of AI Bias</h4>
+
+                                <p><strong>1. Historical Bias</strong></p>
+                                <p>Training data reflects past discrimination.</p>
+                                <ul>
+                                    <li>Example: Hiring AI trained on past decisions perpetuates past biases</li>
+                                </ul>
+
+                                <p><strong>2. Representation Bias</strong></p>
+                                <p>Training data doesn't represent all groups equally.</p>
+                                <ul>
+                                    <li>Example: Facial recognition trained mostly on one demographic</li>
+                                </ul>
+
+                                <p><strong>3. Measurement Bias</strong></p>
+                                <p>The way we measure things introduces bias.</p>
+                                <ul>
+                                    <li>Example: Using "time in office" as productivity proxy disadvantages remote workers</li>
+                                </ul>
+
+                                <p><strong>4. Aggregation Bias</strong></p>
+                                <p>One model for everyone ignores group differences.</p>
+                                <ul>
+                                    <li>Example: Medical AI trained on adults performs poorly for children</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">⚖️</span>
+                                    <div>
+                                        <strong>Legal Risk:</strong> Biased AI can violate anti-discrimination laws (Title VII in the US, Equality Act in the UK, Human Rights Codes in Canada, GDPR/AI Act in the EU).
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Algorithmic Bias',
+                                    url: 'https://www.nist.gov/news-events/news/2022/03/theres-more-ai-bias-biased-data-nist-report-highlights',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Real-World AI Bias Examples',
+                            content: `
+                                <p>These documented cases show why bias management matters:</p>
+
+                                <h4>Amazon's Hiring Tool (2018)</h4>
+                                <p>AI trained on 10 years of resumes learned to penalize words like "women's" (as in "women's chess club") and downgraded graduates of women's colleges. Amazon scrapped the tool.</p>
+
+                                <h4>Healthcare Algorithm (2019)</h4>
+                                <p>A widely-used algorithm to identify patients needing extra care was found to systematically underestimate the health needs of Black patients—because it used healthcare spending (which is lower for Black patients due to access barriers) as a proxy for health needs.</p>
+
+                                <h4>Facial Recognition Accuracy (2019)</h4>
+                                <p>NIST study found error rates in facial recognition were up to 100x higher for certain demographics. Some algorithms had 0.8% error for white men but 34.7% error for Black women.</p>
+
+                                <h4>Chatbot Racism (2016)</h4>
+                                <p>Microsoft's Tay chatbot learned from Twitter interactions and began posting racist and offensive content within 24 hours of launch.</p>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">📰</span>
+                                    <div>
+                                        <strong>Headlines Matter:</strong> Each of these cases generated significant negative press, regulatory scrutiny, and in some cases, legal action. Proactive bias management prevents these outcomes.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'NIST Face Recognition Study',
+                                    url: 'https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software',
+                                    org: 'NIST'
+                                },
+                                {
+                                    title: 'Dissecting Racial Bias in Healthcare Algorithm',
+                                    url: 'https://www.science.org/doi/10.1126/science.aax2342',
+                                    org: 'Science'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'A company trains an AI on 10 years of promotion decisions. The historical data shows that men were promoted more often. What type of bias will the AI likely exhibit?',
+                            options: [
+                                'Aggregation bias — treating all groups the same',
+                                'Measurement bias — using incorrect metrics',
+                                'Historical bias — reflecting past discrimination',
+                                'Representation bias — insufficient training data'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'This is historical bias—the AI learns from data that reflects past discrimination, and perpetuates that discrimination in its predictions. This is why AI used in employment decisions requires careful bias assessment and mitigation.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Transparency & Explainability',
+                            content: `
+                                <p><strong>Transparency</strong> means people know when AI is being used and understand how it affects them.</p>
+                                <p><strong>Explainability</strong> means AI decisions can be understood and explained to affected parties.</p>
+
+                                <h4>EU AI Act Transparency Requirements</h4>
+
+                                <p><strong>All AI systems must:</strong></p>
+                                <ul>
+                                    <li>Inform users they're interacting with AI (chatbots, etc.)</li>
+                                    <li>Label AI-generated content (deepfakes, synthetic media)</li>
+                                </ul>
+
+                                <p><strong>High-risk AI systems must also:</strong></p>
+                                <ul>
+                                    <li>Provide documentation explaining how the system works</li>
+                                    <li>Log decisions for audit purposes</li>
+                                    <li>Enable users to interpret outputs</li>
+                                    <li>Allow affected persons to seek explanation of decisions</li>
+                                </ul>
+
+                                <h4>Explainability Methods</h4>
+                                <ul>
+                                    <li><strong>Feature importance:</strong> Which factors influenced the decision most</li>
+                                    <li><strong>Counterfactual explanations:</strong> "You would have been approved if X were different"</li>
+                                    <li><strong>Local explanations:</strong> Why this specific decision was made</li>
+                                    <li><strong>Model documentation:</strong> How the system was built and tested</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Practical Tip:</strong> When deploying AI, ask: "Can we explain this decision to an affected customer, regulator, or court?" If not, the system may not be ready for deployment.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act - Transparency',
+                                    url: 'https://artificialintelligenceact.eu/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Bias Testing & Mitigation',
+                            content: `
+                                <h4>Testing for Bias</h4>
+                                <ul>
+                                    <li><strong>Disparate impact analysis:</strong> Compare outcomes across demographic groups</li>
+                                    <li><strong>Subgroup performance:</strong> Test accuracy/error rates by group</li>
+                                    <li><strong>Counterfactual testing:</strong> Would the decision change if protected attributes changed?</li>
+                                    <li><strong>Adversarial testing:</strong> Try to find edge cases where bias emerges</li>
+                                </ul>
+
+                                <h4>Mitigating Bias</h4>
+
+                                <p><strong>Pre-processing (Before Training)</strong></p>
+                                <ul>
+                                    <li>Audit and balance training data</li>
+                                    <li>Remove or transform biased features</li>
+                                    <li>Oversample underrepresented groups</li>
+                                </ul>
+
+                                <p><strong>In-processing (During Training)</strong></p>
+                                <ul>
+                                    <li>Fairness constraints in model optimization</li>
+                                    <li>Adversarial debiasing techniques</li>
+                                </ul>
+
+                                <p><strong>Post-processing (After Training)</strong></p>
+                                <ul>
+                                    <li>Adjust decision thresholds by group</li>
+                                    <li>Human review of flagged decisions</li>
+                                    <li>Ongoing monitoring and correction</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>No Perfect Solution:</strong> Different fairness metrics can conflict. Optimizing for one type of fairness may worsen another. These tradeoffs require human judgment and documentation.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Fairness in Machine Learning',
+                                    url: 'https://www.nist.gov/news-events/news/2022/03/theres-more-ai-bias-biased-data-nist-report-highlights',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Biased AI Discovery',
+                            context: 'Your team discovers that your customer support chatbot performs significantly worse for users who write in non-standard English (including non-native speakers and users of regional dialects). It often misunderstands their questions and provides unhelpful responses. A product launch is in two weeks.',
+                            choices: [
+                                {
+                                    text: 'Launch on schedule—most users won\'t be affected',
+                                    correct: false,
+                                    feedback: 'This approach ignores a known fairness issue. Launching a system you know performs poorly for certain groups creates legal risk (potential discrimination), reputational risk, and harms those users. The EU AI Act requires bias mitigation.'
+                                },
+                                {
+                                    text: 'Document the issue but launch anyway, then fix it later',
+                                    correct: false,
+                                    feedback: 'Knowingly deploying a biased system is risky. Documentation that you knew about bias before launch could actually increase legal liability. It shows the harm was foreseeable and you chose to proceed.'
+                                },
+                                {
+                                    text: 'Delay launch to address the bias, and implement interim safeguards',
+                                    correct: true,
+                                    feedback: 'Correct! Responsible AI deployment means addressing known issues before launch. Interim safeguards might include human escalation for affected users, clear disclosure of limitations, or targeted improvements before launch.'
+                                },
+                                {
+                                    text: 'Add a disclaimer that the chatbot works best with standard English',
+                                    correct: false,
+                                    feedback: 'A disclaimer doesn\'t fix the underlying problem and may not protect against discrimination claims. It also creates a poor user experience for affected users. The bias should be addressed, not just disclosed.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: Responsible AI in Practice
+                // ========================================
+                {
+                    title: 'Responsible AI in Practice',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Your Role in AI Governance',
+                            content: `
+                                <p>AI governance isn't just for the AI team. <strong>Everyone</strong> who uses, builds, or manages AI systems has responsibilities.</p>
+
+                                <h4>If You USE AI Tools</h4>
+                                <ul>
+                                    <li>Understand what the AI is doing and its limitations</li>
+                                    <li>Verify AI outputs before acting on them</li>
+                                    <li>Don't input confidential or personal data unless approved</li>
+                                    <li>Report problems, biases, or unexpected behavior</li>
+                                    <li>Follow your organization's AI acceptable use policy</li>
+                                </ul>
+
+                                <h4>If You BUILD AI Systems</h4>
+                                <ul>
+                                    <li>Document design decisions and tradeoffs</li>
+                                    <li>Test for bias and fairness</li>
+                                    <li>Implement appropriate human oversight</li>
+                                    <li>Create audit trails and logging</li>
+                                    <li>Follow security and privacy requirements</li>
+                                </ul>
+
+                                <h4>If You PROCURE AI</h4>
+                                <ul>
+                                    <li>Assess vendor AI systems for risk</li>
+                                    <li>Require documentation and compliance attestations</li>
+                                    <li>Include AI governance terms in contracts</li>
+                                    <li>Understand where your data goes and how it's used</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">🎯</span>
+                                    <div>
+                                        <strong>Key Point:</strong> The EU AI Act places obligations on "deployers" (organizations using AI)—not just providers (organizations building AI). You're accountable for how you use AI.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act - Deployer Obligations',
+                                    url: 'https://artificialintelligenceact.eu/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Using AI Tools Responsibly',
+                            content: `
+                                <h4>Before Using an AI Tool</h4>
+                                <ul>
+                                    <li>Check if it's approved for your use case</li>
+                                    <li>Understand its limitations and failure modes</li>
+                                    <li>Know what data you can and cannot input</li>
+                                    <li>Determine if your use case is high-risk</li>
+                                </ul>
+
+                                <h4>Data Input Guidelines</h4>
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never input into external AI tools:</strong>
+                                        <ul>
+                                            <li>Personal data (names, emails, IDs)</li>
+                                            <li>Confidential business information</li>
+                                            <li>Customer data</li>
+                                            <li>Source code or trade secrets</li>
+                                            <li>Financial or legal information</li>
+                                        </ul>
+                                        Unless explicitly approved for that specific tool and use case.
+                                    </div>
+                                </div>
+
+                                <h4>Verifying AI Outputs</h4>
+                                <ul>
+                                    <li><strong>Factual claims:</strong> Verify with authoritative sources</li>
+                                    <li><strong>Code:</strong> Review and test before deploying</li>
+                                    <li><strong>Analysis:</strong> Check methodology and assumptions</li>
+                                    <li><strong>Recommendations:</strong> Apply human judgment</li>
+                                </ul>
+
+                                <h4>Reporting Issues</h4>
+                                <p>If you observe AI behaving unexpectedly, producing biased outputs, or creating risks—report it to your manager or the AI governance team immediately.</p>
+                            `
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'You want to use an AI tool to help analyze customer feedback data. What should you do FIRST?',
+                            options: [
+                                'Upload the data and start analyzing—the AI will handle it',
+                                'Check if the tool is approved for use with customer data',
+                                'Anonymize the data yourself and proceed',
+                                'Ask a colleague if they\'ve used this tool before'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'Before using AI tools with any sensitive data, check your organization\'s AI acceptable use policy and data classification guidelines. Not all tools are approved for customer data, and using unapproved tools could violate privacy regulations and company policy.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Documentation Requirements',
+                            content: `
+                                <p>The EU AI Act requires extensive documentation for high-risk AI systems. Even for lower-risk AI, good documentation is essential.</p>
+
+                                <h4>What to Document</h4>
+
+                                <p><strong>System Description</strong></p>
+                                <ul>
+                                    <li>What the AI system does</li>
+                                    <li>Intended use and users</li>
+                                    <li>Known limitations</li>
+                                </ul>
+
+                                <p><strong>Risk Assessment</strong></p>
+                                <ul>
+                                    <li>Identified risks and their severity</li>
+                                    <li>Mitigation measures implemented</li>
+                                    <li>Residual risks accepted</li>
+                                </ul>
+
+                                <p><strong>Data & Training</strong></p>
+                                <ul>
+                                    <li>Data sources and quality</li>
+                                    <li>Training methodology</li>
+                                    <li>Bias testing results</li>
+                                </ul>
+
+                                <p><strong>Testing & Validation</strong></p>
+                                <ul>
+                                    <li>Test results and metrics</li>
+                                    <li>Performance across subgroups</li>
+                                    <li>Human oversight procedures</li>
+                                </ul>
+
+                                <p><strong>Monitoring & Updates</strong></p>
+                                <ul>
+                                    <li>Monitoring procedures</li>
+                                    <li>Incident log</li>
+                                    <li>Update history</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">📋</span>
+                                    <div>
+                                        <strong>Remember:</strong> "If it isn't documented, it didn't happen." Auditors will ask for evidence of your AI governance practices.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'EU AI Act - Documentation Requirements',
+                                    url: 'https://artificialintelligenceact.eu/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. AI Ethics is now law</strong><br>
+                                The EU AI Act and other regulations make ethical AI a legal requirement, not just a nice-to-have.</p>
+
+                                <p><strong>2. Risk-based approach</strong><br>
+                                AI systems are classified by risk level, with high-risk systems (HR, finance, healthcare) requiring the most controls.</p>
+
+                                <p><strong>3. Bias is real and measurable</strong><br>
+                                AI can perpetuate discrimination. Testing for bias and implementing mitigations is required.</p>
+
+                                <p><strong>4. Transparency matters</strong><br>
+                                Users must know when they're interacting with AI, and affected persons can request explanations of AI decisions.</p>
+
+                                <p><strong>5. Human oversight is required</strong><br>
+                                Humans must maintain meaningful control over AI systems, especially for high-risk applications.</p>
+
+                                <p><strong>6. Everyone has a role</strong><br>
+                                Whether you build, buy, or use AI—you have responsibilities for ensuring it's used responsibly.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">🎯</span>
+                                    <div>
+                                        <strong>Remember:</strong> Responsible AI isn't about slowing down innovation—it's about innovating in a way that builds trust and avoids harm. The companies that get this right will have a competitive advantage.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing AI Ethics & Governance Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>

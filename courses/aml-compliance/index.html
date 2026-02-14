@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Money Laundering (AML) Training | Obsero</title>
+    <meta name="description" content="Learn AML compliance essentials: KYC requirements, suspicious activity detection, reporting obligations, and your role in preventing financial crime.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">Anti-Money Laundering Training</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list"></nav>
+        </aside>
+
+        <main class="course-main">
+            <div class="module-header"></div>
+            <div class="content-area"></div>
+        </main>
+
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        course = new ObseroCourse({
+            courseId: 'aml-compliance',
+            courseTitle: 'Anti-Money Laundering (AML) Training',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: Understanding Money Laundering
+                // ========================================
+                {
+                    title: 'Understanding Money Laundering',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to AML Training',
+                            content: `
+                                <p>This course will teach you the fundamentals of anti-money laundering compliance and your role in preventing financial crime.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 40 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>What money laundering is and how it works</li>
+                                    <li>Key AML regulations and requirements</li>
+                                    <li>Know Your Customer (KYC) obligations</li>
+                                    <li>How to recognize red flags</li>
+                                    <li>Suspicious activity reporting</li>
+                                    <li>Your specific responsibilities</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Legal Requirement:</strong> Financial institutions and many businesses are required to train employees on AML compliance. Failing to prevent money laundering can result in massive fines, criminal prosecution, and loss of operating licenses.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AML Training Requirements',
+                                    url: 'https://www.fincen.gov/resources/statutes-and-regulations/bank-secrecy-act',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is Money Laundering?',
+                            content: `
+                                <p><strong>Money laundering</strong> is the process of making illegally obtained money appear legitimate. Criminals "clean" dirty money so they can use it without attracting attention.</p>
+
+                                <h4>Why Money Laundering Matters</h4>
+                                <p>Money laundering enables serious crimes:</p>
+                                <ul>
+                                    <li>Drug trafficking</li>
+                                    <li>Human trafficking</li>
+                                    <li>Terrorism financing</li>
+                                    <li>Fraud and corruption</li>
+                                    <li>Tax evasion</li>
+                                    <li>Organized crime</li>
+                                </ul>
+
+                                <h4>The Scale of the Problem</h4>
+                                <p>According to the United Nations, an estimated <strong>$800 billion to $2 trillion</strong> is laundered globally each year—roughly 2-5% of global GDP.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🏦</span>
+                                    <div>
+                                        <strong>Why Criminals Need You:</strong> Criminals can't just deposit illegal cash in a bank or buy expensive items. They need to pass through legitimate businesses and financial institutions—that's where you come in as a gatekeeper.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Money Laundering Overview',
+                                    url: 'https://www.unodc.org/unodc/en/money-laundering/overview.html',
+                                    org: 'United Nations Office on Drugs and Crime'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'The Three Stages of Money Laundering',
+                            content: `
+                                <p>Money laundering typically occurs in three stages:</p>
+
+                                <h4>1. Placement 💵</h4>
+                                <p>Getting illegal cash into the financial system.</p>
+                                <p>Methods include:</p>
+                                <ul>
+                                    <li>Depositing cash in small amounts ("structuring" or "smurfing")</li>
+                                    <li>Mixing with legitimate cash business revenues</li>
+                                    <li>Using cash to buy valuable assets</li>
+                                    <li>Currency smuggling across borders</li>
+                                </ul>
+
+                                <h4>2. Layering 🔄</h4>
+                                <p>Moving and disguising money to obscure its origins.</p>
+                                <p>Methods include:</p>
+                                <ul>
+                                    <li>Multiple wire transfers between accounts</li>
+                                    <li>Moving through multiple countries</li>
+                                    <li>Creating complex corporate structures</li>
+                                    <li>Using shell companies and nominees</li>
+                                    <li>Converting between asset types</li>
+                                </ul>
+
+                                <h4>3. Integration 🏠</h4>
+                                <p>Returning the "cleaned" money to the criminal.</p>
+                                <p>Methods include:</p>
+                                <ul>
+                                    <li>Purchasing real estate or luxury goods</li>
+                                    <li>Investing in legitimate businesses</li>
+                                    <li>Fake loans or invoices</li>
+                                    <li>Investment in securities</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">🎯</span>
+                                    <div>
+                                        <strong>Your Role:</strong> You're most likely to detect money laundering during <strong>placement</strong> (unusual transactions) and <strong>layering</strong> (suspicious patterns). Being vigilant at these stages stops criminals.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Money Laundering Stages',
+                                    url: 'https://www.fatf-gafi.org/en/topics/money-laundering.html',
+                                    org: 'FATF'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'A customer makes multiple cash deposits just under $10,000 over several days, spread across different branches. Which stage of money laundering does this likely represent?',
+                            options: [
+                                'Integration — returning clean money to the criminal',
+                                'Layering — moving money to disguise its origins',
+                                'Placement — getting illegal cash into the financial system',
+                                'This is not money laundering'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'This is "structuring" or "smurfing" — breaking large cash deposits into smaller amounts to avoid reporting thresholds. It\'s a classic placement technique to get illegal cash into the financial system. This is illegal even if the underlying cash is legitimate.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: AML Regulations
+                // ========================================
+                {
+                    title: 'AML Regulations & Requirements',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Key AML Regulations',
+                            content: `
+                                <h4>🇺🇸 United States</h4>
+                                <p><strong>Bank Secrecy Act (BSA)</strong></p>
+                                <ul>
+                                    <li>Foundation of U.S. AML law since 1970</li>
+                                    <li>Requires financial institutions to assist government agencies</li>
+                                    <li>Mandates record-keeping and reporting</li>
+                                </ul>
+
+                                <p><strong>USA PATRIOT Act</strong></p>
+                                <ul>
+                                    <li>Expanded BSA requirements post-9/11</li>
+                                    <li>Enhanced customer identification</li>
+                                    <li>Correspondent banking due diligence</li>
+                                </ul>
+
+                                <h4>🇪🇺 European Union</h4>
+                                <p><strong>Anti-Money Laundering Directives (AMLD)</strong></p>
+                                <ul>
+                                    <li>Currently on 6th Directive (6AMLD)</li>
+                                    <li>Expanded list of obligated entities</li>
+                                    <li>Beneficial ownership requirements</li>
+                                </ul>
+
+                                <h4>🇨🇦 Canada</h4>
+                                <p><strong>PCMLTFA (Proceeds of Crime Act)</strong></p>
+                                <ul>
+                                    <li>FINTRAC as regulatory authority</li>
+                                    <li>Similar requirements to BSA</li>
+                                </ul>
+
+                                <h4>🌍 International</h4>
+                                <p><strong>FATF (Financial Action Task Force)</strong></p>
+                                <ul>
+                                    <li>Sets global AML standards (40 Recommendations)</li>
+                                    <li>Countries evaluated on compliance</li>
+                                    <li>Non-compliant countries face restrictions</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Bank Secrecy Act',
+                                    url: 'https://www.fincen.gov/resources/statutes-and-regulations/bank-secrecy-act',
+                                    org: 'FinCEN'
+                                },
+                                {
+                                    title: 'FATF Recommendations',
+                                    url: 'https://www.fatf-gafi.org/en/topics/fatf-recommendations.html',
+                                    org: 'FATF'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Who Must Comply?',
+                            content: `
+                                <p>AML regulations apply to a wide range of businesses beyond traditional banks:</p>
+
+                                <h4>Financial Institutions</h4>
+                                <ul>
+                                    <li>Banks and credit unions</li>
+                                    <li>Securities brokers and dealers</li>
+                                    <li>Investment advisers</li>
+                                    <li>Insurance companies</li>
+                                    <li>Money service businesses (MSBs)</li>
+                                    <li>Cryptocurrency exchanges</li>
+                                </ul>
+
+                                <h4>Designated Non-Financial Businesses (DNFBPs)</h4>
+                                <ul>
+                                    <li>Casinos and gambling</li>
+                                    <li>Real estate agents</li>
+                                    <li>Precious metals and stones dealers</li>
+                                    <li>Lawyers and accountants (in some jurisdictions)</li>
+                                    <li>Trust and company service providers</li>
+                                </ul>
+
+                                <h4>FinTech & Tech Companies</h4>
+                                <ul>
+                                    <li>Payment processors</li>
+                                    <li>Digital wallets</li>
+                                    <li>Peer-to-peer payment apps</li>
+                                    <li>Cryptocurrency services</li>
+                                    <li>Marketplace platforms (depending on services)</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>If your company handles payments, transfers money, or provides financial services, you likely have AML obligations.</strong>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'BSA Covered Institutions',
+                                    url: 'https://www.fincen.gov/financial-institutions',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'AML Program Requirements',
+                            content: `
+                                <p>Every covered business must establish an AML compliance program with these elements:</p>
+
+                                <h4>1. Internal Policies and Procedures</h4>
+                                <ul>
+                                    <li>Written AML/KYC policies</li>
+                                    <li>Clear procedures for identifying and reporting suspicious activity</li>
+                                    <li>Customer risk assessment procedures</li>
+                                </ul>
+
+                                <h4>2. Compliance Officer</h4>
+                                <ul>
+                                    <li>Designated person responsible for AML program</li>
+                                    <li>Authority to implement and enforce compliance</li>
+                                    <li>Direct reporting line to senior management</li>
+                                </ul>
+
+                                <h4>3. Employee Training</h4>
+                                <ul>
+                                    <li>Initial training for all relevant employees</li>
+                                    <li>Ongoing/annual refresher training</li>
+                                    <li>Role-specific training (you're doing this now!)</li>
+                                </ul>
+
+                                <h4>4. Independent Testing</h4>
+                                <ul>
+                                    <li>Regular audits of AML program</li>
+                                    <li>Testing by qualified independent party</li>
+                                    <li>Documentation of findings and remediation</li>
+                                </ul>
+
+                                <h4>5. Customer Due Diligence (CDD)</h4>
+                                <ul>
+                                    <li>Know Your Customer (KYC) procedures</li>
+                                    <li>Beneficial ownership identification</li>
+                                    <li>Ongoing monitoring</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AML Program Requirements',
+                                    url: 'https://www.fincen.gov/resources/statutes-and-regulations/guidance/anti-money-laundering-programs',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following is NOT a required element of an AML compliance program?',
+                            options: [
+                                'Written internal policies and procedures',
+                                'Designated compliance officer',
+                                'Zero-tolerance policy that reports all large transactions to law enforcement',
+                                'Employee training program'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'AML programs require policies, a compliance officer, training, independent testing, and customer due diligence. There is NO requirement to report all large transactions—only suspicious ones. Large legitimate transactions are normal business.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: Know Your Customer (KYC)
+                // ========================================
+                {
+                    title: 'Know Your Customer (KYC)',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'What is KYC?',
+                            content: `
+                                <p><strong>Know Your Customer (KYC)</strong> is the process of verifying the identity of your customers and understanding the nature of their activities to ensure they are not involved in money laundering or other financial crimes.</p>
+
+                                <h4>KYC Components</h4>
+
+                                <p><strong>1. Customer Identification Program (CIP)</strong></p>
+                                <ul>
+                                    <li>Verify identity using reliable documents</li>
+                                    <li>Collect name, date of birth, address, ID number</li>
+                                    <li>For businesses: legal name, ownership structure, registration</li>
+                                </ul>
+
+                                <p><strong>2. Customer Due Diligence (CDD)</strong></p>
+                                <ul>
+                                    <li>Understand the nature of the customer relationship</li>
+                                    <li>Assess risk level of the customer</li>
+                                    <li>Establish expected transaction patterns</li>
+                                </ul>
+
+                                <p><strong>3. Enhanced Due Diligence (EDD)</strong></p>
+                                <ul>
+                                    <li>Additional scrutiny for high-risk customers</li>
+                                    <li>Source of funds verification</li>
+                                    <li>More frequent monitoring</li>
+                                </ul>
+
+                                <p><strong>4. Ongoing Monitoring</strong></p>
+                                <ul>
+                                    <li>Monitor transactions for suspicious activity</li>
+                                    <li>Update customer information periodically</li>
+                                    <li>Re-assess risk as needed</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🔍</span>
+                                    <div>
+                                        <strong>Risk-Based Approach:</strong> Not all customers require the same level of scrutiny. Low-risk customers get standard due diligence; high-risk customers (PEPs, high-risk countries, complex structures) require enhanced due diligence.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Customer Due Diligence Requirements',
+                                    url: 'https://www.fincen.gov/resources/statutes-and-regulations/guidance/customer-due-diligence-requirements',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'High-Risk Customers & PEPs',
+                            content: `
+                                <h4>Who is High-Risk?</h4>
+
+                                <p><strong>Politically Exposed Persons (PEPs)</strong></p>
+                                <ul>
+                                    <li>Government officials and their families</li>
+                                    <li>Senior executives of state-owned enterprises</li>
+                                    <li>Senior political party officials</li>
+                                    <li>Senior military officials</li>
+                                    <li>Senior judicial officials</li>
+                                </ul>
+
+                                <p><strong>High-Risk Business Types</strong></p>
+                                <ul>
+                                    <li>Cash-intensive businesses</li>
+                                    <li>Money service businesses</li>
+                                    <li>Gambling and gaming</li>
+                                    <li>Cryptocurrency-related businesses</li>
+                                    <li>Precious metals and stones dealers</li>
+                                </ul>
+
+                                <p><strong>Geographic Risk</strong></p>
+                                <ul>
+                                    <li>Countries on FATF grey/black lists</li>
+                                    <li>Countries with weak AML controls</li>
+                                    <li>Sanctioned countries</li>
+                                    <li>High corruption or drug trafficking regions</li>
+                                </ul>
+
+                                <p><strong>Relationship/Transaction Risk</strong></p>
+                                <ul>
+                                    <li>Complex ownership structures</li>
+                                    <li>Anonymous transactions</li>
+                                    <li>Unusual transaction patterns</li>
+                                    <li>No apparent business rationale</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>PEPs aren't automatically criminals</strong>—but their positions make them higher risk for corruption. They require enhanced due diligence, not automatic rejection.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PEP Guidance',
+                                    url: 'https://www.fatf-gafi.org/en/publications/fatfrecommendations/documents/peps-r12-r22.html',
+                                    org: 'FATF'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'New Customer Onboarding',
+                            context: 'A new customer wants to open an account. They provide a passport from a FATF grey-list country, say they\'re a "consultant" but are vague about what they consult on, and want to receive large wire transfers from multiple countries. They become impatient when you ask questions.',
+                            choices: [
+                                {
+                                    text: 'Open the account — their documents are valid and you don\'t want to discriminate based on nationality',
+                                    correct: false,
+                                    feedback: 'Multiple red flags are present: high-risk country, vague business purpose, expected large international transfers, and reluctance to answer questions. This requires enhanced due diligence, not standard account opening.'
+                                },
+                                {
+                                    text: 'Decline the account — too many red flags',
+                                    correct: false,
+                                    feedback: 'While there are red flags, automatically declining isn\'t the right approach. The correct process is enhanced due diligence to gather more information. Red flags warrant investigation, not automatic rejection.'
+                                },
+                                {
+                                    text: 'Apply enhanced due diligence: verify source of funds, understand the business, document everything, and escalate to compliance',
+                                    correct: true,
+                                    feedback: 'Correct! Multiple risk factors require enhanced due diligence. Get more information about their business, source of funds, and expected transactions. Document everything and involve your compliance team before proceeding.'
+                                },
+                                {
+                                    text: 'Open the account but flag it for monitoring',
+                                    correct: false,
+                                    feedback: 'Monitoring alone isn\'t sufficient when red flags are present at onboarding. You need to conduct enhanced due diligence BEFORE establishing the relationship, not just monitor afterward.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following would typically require Enhanced Due Diligence (EDD)?',
+                            options: [
+                                'A local small business owner with clear income sources',
+                                'A government minister from another country opening an account',
+                                'A salary employee setting up direct deposit',
+                                'A routine wire transfer between two domestic banks'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'A government minister is a Politically Exposed Person (PEP), which automatically triggers enhanced due diligence requirements. PEPs have higher corruption risk due to their positions of power and require additional scrutiny, including source of wealth verification.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Recognizing Red Flags
+                // ========================================
+                {
+                    title: 'Recognizing Red Flags',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Transaction Red Flags',
+                            content: `
+                                <p>These transaction patterns should raise suspicion:</p>
+
+                                <h4>Structuring</h4>
+                                <ul>
+                                    <li>Deposits just under reporting thresholds ($10,000 in US)</li>
+                                    <li>Multiple transactions to avoid reporting</li>
+                                    <li>Breaking large amounts into smaller transactions</li>
+                                </ul>
+
+                                <h4>Unusual Patterns</h4>
+                                <ul>
+                                    <li>Transactions inconsistent with customer's business</li>
+                                    <li>Sudden increase in transaction volume</li>
+                                    <li>Round-dollar transactions (exactly $5,000, $10,000)</li>
+                                    <li>Rapid movement of funds (in and out quickly)</li>
+                                </ul>
+
+                                <h4>Wire Transfer Red Flags</h4>
+                                <ul>
+                                    <li>Transfers to/from high-risk jurisdictions</li>
+                                    <li>Multiple transfers to unrelated parties</li>
+                                    <li>Lack of apparent business purpose</li>
+                                    <li>Third-party payments (paying someone else's bills)</li>
+                                </ul>
+
+                                <h4>Cash Red Flags</h4>
+                                <ul>
+                                    <li>Large cash deposits/withdrawals</li>
+                                    <li>Cash deposits followed by immediate wire transfers</li>
+                                    <li>Reluctance to use traceable payment methods</li>
+                                    <li>Customer knows reporting thresholds</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Context Matters:</strong> A red flag doesn't mean a crime occurred—it means you should look more closely. A jewelry store receiving large cash payments is different from a software company doing the same.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Red Flags of Money Laundering',
+                                    url: 'https://www.fincen.gov/resources/advisories/fincen-advisory-fin-2010-a001',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Customer Behavior Red Flags',
+                            content: `
+                                <h4>Identity & Documentation</h4>
+                                <ul>
+                                    <li>Reluctance to provide identification</li>
+                                    <li>Providing unusual or suspicious documentation</li>
+                                    <li>Multiple accounts under different names at same address</li>
+                                    <li>Information that doesn't match other records</li>
+                                </ul>
+
+                                <h4>Suspicious Behavior</h4>
+                                <ul>
+                                    <li>Excessive nervousness or secrecy</li>
+                                    <li>Questions about reporting requirements</li>
+                                    <li>Attempting to discourage required reports</li>
+                                    <li>Offering bribes or gifts to avoid procedures</li>
+                                    <li>Using intermediaries to avoid direct contact</li>
+                                </ul>
+
+                                <h4>Business Red Flags</h4>
+                                <ul>
+                                    <li>Business type doesn't match transactions</li>
+                                    <li>Unable to explain nature of business</li>
+                                    <li>No apparent profit motive</li>
+                                    <li>Shell companies with no clear purpose</li>
+                                    <li>Complex structures with no business rationale</li>
+                                </ul>
+
+                                <h4>Account Activity Red Flags</h4>
+                                <ul>
+                                    <li>Little or no activity followed by large transactions</li>
+                                    <li>Account used as pass-through (money in, same money out)</li>
+                                    <li>Multiple accounts with similar activity patterns</li>
+                                    <li>Transactions with known problematic entities</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Trust Your Instincts:</strong> If something feels wrong, it probably deserves a closer look. You know your customers—unusual behavior stands out.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Suspicious Activity Indicators',
+                                    url: 'https://www.fincen.gov/sites/default/files/shared/sarnarrcompletguidfinal_112003.pdf',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Unusual Transaction Request',
+                            context: 'A long-time customer who runs a small retail store suddenly requests a wire transfer of $85,000 to a company in a country known for weak AML controls. When you ask about the purpose, they say it\'s for "inventory" but seem uncomfortable and quickly say "just do it, I\'m in a hurry."',
+                            choices: [
+                                {
+                                    text: 'Process the transfer — they\'re a long-time customer in good standing',
+                                    correct: false,
+                                    feedback: 'Even long-time customers can become involved in suspicious activity. The transaction is unusual for this business, the destination is high-risk, and the customer is being evasive. These are serious red flags.'
+                                },
+                                {
+                                    text: 'Refuse the transaction and close their account',
+                                    correct: false,
+                                    feedback: 'Refusing and closing without proper procedures isn\'t correct. You need to gather more information and involve compliance. If you suspect suspicious activity, you may need to file a SAR—which requires the activity to occur to be reportable.'
+                                },
+                                {
+                                    text: 'Ask clarifying questions, document the interaction, and escalate to your compliance team',
+                                    correct: true,
+                                    feedback: 'Correct! Get more details about the transaction purpose, document the customer\'s responses (including evasiveness), and escalate to compliance. They will determine whether to file a Suspicious Activity Report (SAR).'
+                                },
+                                {
+                                    text: 'Process it but file a Suspicious Activity Report yourself',
+                                    correct: false,
+                                    feedback: 'While filing a SAR may be appropriate, you should escalate to compliance first. SAR filing typically requires compliance/management approval, and they need to assess the situation. Don\'t process suspicious transactions without proper review.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following is an example of "structuring"?',
+                            options: [
+                                'A business depositing its weekly revenue of $15,000',
+                                'Making five $9,500 deposits over five days to avoid the $10,000 reporting threshold',
+                                'Wiring money to a family member in another country',
+                                'Opening multiple accounts for different business purposes'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'Structuring (also called "smurfing") is deliberately breaking transactions into smaller amounts to avoid reporting thresholds. Making multiple deposits just under $10,000 to avoid Currency Transaction Reports is structuring—and it\'s illegal, even if the underlying money is legitimate.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: Reporting & Your Responsibilities
+                // ========================================
+                {
+                    title: 'Reporting & Your Responsibilities',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Suspicious Activity Reports (SARs)',
+                            content: `
+                                <p>A <strong>Suspicious Activity Report (SAR)</strong> is a document filed with FinCEN (or equivalent authority) when suspicious activity is detected.</p>
+
+                                <h4>When to File</h4>
+                                <p>SARs are required when you detect:</p>
+                                <ul>
+                                    <li>Potential money laundering</li>
+                                    <li>BSA/AML violations</li>
+                                    <li>Structuring to avoid reporting</li>
+                                    <li>Fraud or other financial crimes</li>
+                                    <li>Unusual activity with no apparent business purpose</li>
+                                </ul>
+
+                                <h4>Dollar Thresholds</h4>
+                                <ul>
+                                    <li><strong>$5,000+</strong> — Suspicious transactions involving an identified suspect</li>
+                                    <li><strong>$25,000+</strong> — Suspicious transactions with no identified suspect</li>
+                                    <li><strong>Any amount</strong> — If potential money laundering or BSA violation</li>
+                                </ul>
+
+                                <h4>Filing Deadline</h4>
+                                <p>SARs must be filed within <strong>30 days</strong> of detecting suspicious activity (can extend to 60 days if identifying a suspect).</p>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🤫</span>
+                                    <div>
+                                        <strong>SAR Confidentiality:</strong> You must NEVER tell the customer (or anyone outside your compliance function) that a SAR has been or will be filed. "Tipping off" is a serious criminal offense.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SAR Filing Requirements',
+                                    url: 'https://www.fincen.gov/resources/filing-information',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Your Responsibilities',
+                            content: `
+                                <h4>What You Must Do</h4>
+
+                                <p><strong>1. Know Your Customers</strong></p>
+                                <ul>
+                                    <li>Understand who you're doing business with</li>
+                                    <li>Verify identities as required</li>
+                                    <li>Ask questions when things don't add up</li>
+                                </ul>
+
+                                <p><strong>2. Recognize Red Flags</strong></p>
+                                <ul>
+                                    <li>Be alert to unusual transactions</li>
+                                    <li>Notice suspicious behavior</li>
+                                    <li>Understand your customers' normal patterns</li>
+                                </ul>
+
+                                <p><strong>3. Report Concerns</strong></p>
+                                <ul>
+                                    <li>Escalate suspicious activity to compliance immediately</li>
+                                    <li>Document what you observed</li>
+                                    <li>Don't investigate on your own</li>
+                                </ul>
+
+                                <p><strong>4. Maintain Confidentiality</strong></p>
+                                <ul>
+                                    <li>Never discuss SARs with customers</li>
+                                    <li>Don't tip off subjects of investigation</li>
+                                    <li>Only discuss concerns with authorized personnel</li>
+                                </ul>
+
+                                <p><strong>5. Complete Training</strong></p>
+                                <ul>
+                                    <li>Take required AML training</li>
+                                    <li>Stay current on policies and procedures</li>
+                                    <li>Ask questions if you're unsure</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>You're Protected:</strong> The BSA includes safe harbor provisions—you cannot be sued for reporting suspicious activity in good faith.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'BSA Safe Harbor',
+                                    url: 'https://www.fincen.gov/resources/statutes-and-regulations/bank-secrecy-act',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Consequences of Non-Compliance',
+                            content: `
+                                <h4>For Organizations</h4>
+                                <ul>
+                                    <li><strong>Massive fines:</strong> Penalties in the billions of dollars have been assessed</li>
+                                    <li><strong>Loss of banking licenses:</strong> Unable to continue operating</li>
+                                    <li><strong>Criminal prosecution:</strong> Of the company and executives</li>
+                                    <li><strong>Reputational damage:</strong> Loss of customers and partners</li>
+                                    <li><strong>Regulatory restrictions:</strong> Enhanced oversight, consent orders</li>
+                                </ul>
+
+                                <h4>For Individuals</h4>
+                                <ul>
+                                    <li><strong>Personal fines:</strong> Up to $1 million per violation</li>
+                                    <li><strong>Criminal charges:</strong> Up to 10 years in prison</li>
+                                    <li><strong>Career consequences:</strong> Industry bans, job loss</li>
+                                    <li><strong>Civil liability:</strong> Personal lawsuits</li>
+                                </ul>
+
+                                <h4>Recent Major Penalties</h4>
+                                <ul>
+                                    <li>HSBC: $1.9 billion (2012)</li>
+                                    <li>Standard Chartered: $1.1 billion (2019)</li>
+                                    <li>Deutsche Bank: $630 million (2017)</li>
+                                    <li>Capital One: $390 million (2021)</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Personal Liability:</strong> "I was just following orders" or "I didn't know" are not defenses. If you knowingly facilitate money laundering or ignore obvious red flags, you can be personally prosecuted.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AML Enforcement Actions',
+                                    url: 'https://www.fincen.gov/news-room/enforcement-actions',
+                                    org: 'FinCEN'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. Money laundering enables serious crimes</strong><br>
+                                Understanding how it works helps you prevent it.</p>
+
+                                <p><strong>2. Three stages: Placement, Layering, Integration</strong><br>
+                                You're most likely to detect activity during placement and layering.</p>
+
+                                <p><strong>3. KYC is your first line of defense</strong><br>
+                                Know who your customers are and what they should be doing.</p>
+
+                                <p><strong>4. Recognize red flags</strong><br>
+                                Unusual transactions, suspicious behavior, and patterns that don't make sense.</p>
+
+                                <p><strong>5. Report concerns immediately</strong><br>
+                                Escalate to compliance—don't investigate yourself.</p>
+
+                                <p><strong>6. Never tip off</strong><br>
+                                Keep SAR filings confidential. Tipping off is a crime.</p>
+
+                                <p><strong>7. Consequences are severe</strong><br>
+                                Both organizations and individuals face massive penalties for non-compliance.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">🛡️</span>
+                                    <div>
+                                        <strong>Remember:</strong> You're a gatekeeper protecting the financial system from criminal abuse. Your vigilance matters.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing AML Compliance Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIPAA Compliance Training | Obsero</title>
+    <meta name="description" content="Learn HIPAA compliance essentials: Privacy Rule, Security Rule, PHI handling, and breach notification. Required training for healthcare organizations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">HIPAA Compliance Training</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list"></nav>
+        </aside>
+
+        <main class="course-main">
+            <div class="module-header"></div>
+            <div class="content-area"></div>
+        </main>
+
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        course = new ObseroCourse({
+            courseId: 'hipaa-compliance',
+            courseTitle: 'HIPAA Compliance Training',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: HIPAA Fundamentals
+                // ========================================
+                {
+                    title: 'HIPAA Fundamentals',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to HIPAA Compliance Training',
+                            content: `
+                                <p>This course covers the essential requirements of the Health Insurance Portability and Accountability Act (HIPAA) and your responsibilities for protecting patient information.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 45 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>What HIPAA is and who it applies to</li>
+                                    <li>What Protected Health Information (PHI) includes</li>
+                                    <li>The Privacy Rule and patient rights</li>
+                                    <li>The Security Rule and safeguards</li>
+                                    <li>Breach notification requirements</li>
+                                    <li>Your specific responsibilities</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Required Training:</strong> HIPAA regulations require covered entities and business associates to provide workforce training. This training must be documented.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'HIPAA Training Requirements',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/privacy-practices-for-protected-health-information/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is HIPAA?',
+                            content: `
+                                <p>The <strong>Health Insurance Portability and Accountability Act (HIPAA)</strong> is a U.S. federal law enacted in 1996 that establishes national standards for protecting sensitive patient health information.</p>
+
+                                <h4>HIPAA's Main Components</h4>
+                                <ul>
+                                    <li><strong>Privacy Rule:</strong> Protects the privacy of individually identifiable health information</li>
+                                    <li><strong>Security Rule:</strong> Sets standards for securing electronic protected health information (ePHI)</li>
+                                    <li><strong>Breach Notification Rule:</strong> Requires notification following a breach of unsecured PHI</li>
+                                    <li><strong>Enforcement Rule:</strong> Establishes penalties for HIPAA violations</li>
+                                </ul>
+
+                                <h4>Who Must Comply?</h4>
+                                <p><strong>Covered Entities:</strong></p>
+                                <ul>
+                                    <li>Healthcare providers (doctors, hospitals, clinics, pharmacies)</li>
+                                    <li>Health plans (insurance companies, HMOs, Medicare)</li>
+                                    <li>Healthcare clearinghouses</li>
+                                </ul>
+
+                                <p><strong>Business Associates:</strong></p>
+                                <ul>
+                                    <li>Companies that handle PHI on behalf of covered entities</li>
+                                    <li>Examples: IT vendors, billing companies, cloud storage providers, consultants</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>If you handle health data for healthcare clients, you're likely a Business Associate and must comply with HIPAA.</strong>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'HIPAA Overview',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is Protected Health Information (PHI)?',
+                            content: `
+                                <p><strong>Protected Health Information (PHI)</strong> is any information that can identify a patient and relates to their health condition, healthcare services, or payment for healthcare.</p>
+
+                                <h4>PHI Includes:</h4>
+                                <ul>
+                                    <li>Patient names</li>
+                                    <li>Addresses (including zip codes)</li>
+                                    <li>Dates (birth date, admission date, discharge date)</li>
+                                    <li>Phone and fax numbers</li>
+                                    <li>Email addresses</li>
+                                    <li>Social Security numbers</li>
+                                    <li>Medical record numbers</li>
+                                    <li>Health plan beneficiary numbers</li>
+                                    <li>Account numbers</li>
+                                    <li>Certificate/license numbers</li>
+                                    <li>Device identifiers and serial numbers</li>
+                                    <li>Web URLs and IP addresses</li>
+                                    <li>Biometric identifiers (fingerprints, voice prints)</li>
+                                    <li>Full-face photographs</li>
+                                    <li>Any other unique identifying characteristic</li>
+                                </ul>
+
+                                <h4>Forms of PHI</h4>
+                                <ul>
+                                    <li><strong>Written:</strong> Paper records, printouts, notes</li>
+                                    <li><strong>Electronic (ePHI):</strong> Digital records, emails, databases</li>
+                                    <li><strong>Oral:</strong> Spoken conversations about patients</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Remember:</strong> PHI is protected in ALL forms—paper, electronic, AND verbal. Even casual conversations about patients can be HIPAA violations.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'What is PHI?',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following is considered Protected Health Information (PHI)?',
+                            options: [
+                                'A general health brochure about diabetes',
+                                'An email containing a patient\'s name and upcoming appointment date',
+                                'Aggregate statistics about hospital admission rates',
+                                'A research study with fully de-identified data'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'PHI is any information that can identify a patient AND relates to their health or healthcare. An email with a patient\'s name and appointment date meets both criteria. General health information, aggregate statistics, and properly de-identified data are not PHI.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: The Privacy Rule
+                // ========================================
+                {
+                    title: 'The Privacy Rule',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Understanding the Privacy Rule',
+                            content: `
+                                <p>The <strong>HIPAA Privacy Rule</strong> establishes national standards for when and how PHI can be used and disclosed.</p>
+
+                                <h4>Core Principle: Minimum Necessary</h4>
+                                <p>When using or disclosing PHI, you must limit it to the <strong>minimum necessary</strong> to accomplish the intended purpose.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Example:</strong> If a billing department needs to process a claim, they only need billing-related information—not the patient's complete medical history.
+                                    </div>
+                                </div>
+
+                                <h4>Permitted Uses and Disclosures</h4>
+                                <p>PHI can be used or disclosed WITHOUT patient authorization for:</p>
+                                <ul>
+                                    <li><strong>Treatment:</strong> Providing care, coordinating with other providers</li>
+                                    <li><strong>Payment:</strong> Billing, claims processing, determining coverage</li>
+                                    <li><strong>Healthcare Operations:</strong> Quality assessment, training, audits</li>
+                                </ul>
+
+                                <p>These are often referred to as <strong>"TPO"</strong> (Treatment, Payment, Operations).</p>
+
+                                <h4>Uses Requiring Authorization</h4>
+                                <p>Patient authorization IS required for:</p>
+                                <ul>
+                                    <li>Marketing purposes</li>
+                                    <li>Sale of PHI</li>
+                                    <li>Psychotherapy notes (in most cases)</li>
+                                    <li>Research (with some exceptions)</li>
+                                    <li>Disclosures not otherwise permitted</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'HIPAA Privacy Rule',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/privacy/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Patient Rights Under HIPAA',
+                            content: `
+                                <p>The Privacy Rule gives patients specific rights over their health information:</p>
+
+                                <h4>Right to Access</h4>
+                                <p>Patients can request copies of their medical records. Healthcare providers must respond within 30 days (60 days for records not on-site).</p>
+
+                                <h4>Right to Amend</h4>
+                                <p>Patients can request corrections to their records if they believe information is incorrect or incomplete.</p>
+
+                                <h4>Right to an Accounting of Disclosures</h4>
+                                <p>Patients can request a list of when and to whom their PHI was disclosed (with some exceptions for TPO disclosures).</p>
+
+                                <h4>Right to Request Restrictions</h4>
+                                <p>Patients can request limits on how their PHI is used or disclosed (though covered entities aren't always required to agree).</p>
+
+                                <h4>Right to Confidential Communications</h4>
+                                <p>Patients can request to receive communications by alternative means (e.g., sending mail to a work address instead of home).</p>
+
+                                <h4>Right to a Notice of Privacy Practices</h4>
+                                <p>Patients must receive notice of how their information may be used and their rights.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>If a patient makes a request:</strong> Take it seriously and route it to your Privacy Officer or compliance team. These requests have legal deadlines.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Individual Rights under HIPAA',
+                                    url: 'https://www.hhs.gov/hipaa/for-individuals/guidance-materials-for-consumers/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Patient Information Request',
+                            context: 'A patient\'s adult daughter calls and says, "My mother was just admitted to your hospital. I need to know her room number and condition so I can visit." The mother is conscious and competent but hasn\'t listed her daughter on any authorization forms.',
+                            choices: [
+                                {
+                                    text: 'Provide the room number and condition—family should have access',
+                                    correct: false,
+                                    feedback: 'Without patient authorization, you cannot confirm the patient is even at the facility or share any PHI—including room number and condition—unless the patient has agreed.'
+                                },
+                                {
+                                    text: 'Ask the caller to verify her identity, then provide the information',
+                                    correct: false,
+                                    feedback: 'Verifying the caller\'s identity doesn\'t solve the problem. The issue is whether the patient has authorized this disclosure. Without authorization, you cannot share PHI regardless of who\'s asking.'
+                                },
+                                {
+                                    text: 'Explain you cannot confirm or share information without the patient\'s authorization',
+                                    correct: true,
+                                    feedback: 'Correct! Without authorization from the patient, you cannot confirm they\'re a patient or share any information. Suggest the daughter contact the patient directly or visit in person to get authorization.'
+                                },
+                                {
+                                    text: 'Transfer the call to the patient\'s room without confirming information',
+                                    correct: false,
+                                    feedback: 'Transferring to the patient\'s room still confirms they\'re a patient at your facility, which is PHI. You need authorization before taking any action that confirms or discloses their status.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Under the Privacy Rule\'s "minimum necessary" standard, which approach is correct?',
+                            options: [
+                                'Share complete patient records with anyone who requests them for treatment',
+                                'Limit PHI disclosure to only what is needed for the specific purpose',
+                                'Never share any PHI under any circumstances',
+                                'Share PHI freely within the organization since everyone is HIPAA-trained'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'The minimum necessary standard requires limiting PHI use and disclosure to the minimum needed to accomplish the purpose. Complete records aren\'t always necessary, never sharing would prevent treatment, and internal sharing still requires minimum necessary practices.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: The Security Rule
+                // ========================================
+                {
+                    title: 'The Security Rule',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Understanding the Security Rule',
+                            content: `
+                                <p>The <strong>HIPAA Security Rule</strong> establishes standards for protecting electronic Protected Health Information (ePHI). It requires implementing safeguards to ensure confidentiality, integrity, and availability.</p>
+
+                                <h4>Three Types of Safeguards</h4>
+
+                                <p><strong>1. Administrative Safeguards</strong></p>
+                                <ul>
+                                    <li>Security management processes</li>
+                                    <li>Workforce training</li>
+                                    <li>Access management</li>
+                                    <li>Contingency planning</li>
+                                    <li>Security incident procedures</li>
+                                </ul>
+
+                                <p><strong>2. Physical Safeguards</strong></p>
+                                <ul>
+                                    <li>Facility access controls</li>
+                                    <li>Workstation security</li>
+                                    <li>Device and media controls</li>
+                                </ul>
+
+                                <p><strong>3. Technical Safeguards</strong></p>
+                                <ul>
+                                    <li>Access controls (unique user IDs, automatic logoff)</li>
+                                    <li>Audit controls (logging and monitoring)</li>
+                                    <li>Integrity controls (data validation)</li>
+                                    <li>Transmission security (encryption)</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Flexible Standard:</strong> HIPAA recognizes organizations vary in size and resources. What's "reasonable and appropriate" depends on your organization's context—but you must document your decisions.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'HIPAA Security Rule',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/security/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Your Security Responsibilities',
+                            content: `
+                                <h4>Access Controls</h4>
+                                <ul>
+                                    <li>Use unique login credentials—never share passwords</li>
+                                    <li>Log off or lock your workstation when leaving</li>
+                                    <li>Only access PHI you need for your job</li>
+                                    <li>Report any unauthorized access attempts</li>
+                                </ul>
+
+                                <h4>Workstation Security</h4>
+                                <ul>
+                                    <li>Position screens away from public view</li>
+                                    <li>Use privacy screens where appropriate</li>
+                                    <li>Don't leave PHI visible on your desk</li>
+                                    <li>Lock paper records in secure locations</li>
+                                </ul>
+
+                                <h4>Electronic Communications</h4>
+                                <ul>
+                                    <li>Use encrypted email for PHI (or secure patient portals)</li>
+                                    <li>Verify recipient before sending PHI</li>
+                                    <li>Don't send PHI to personal email accounts</li>
+                                    <li>Be cautious with text messages—most aren't secure</li>
+                                </ul>
+
+                                <h4>Mobile Devices</h4>
+                                <ul>
+                                    <li>Only use approved devices for PHI</li>
+                                    <li>Enable encryption and strong passwords</li>
+                                    <li>Report lost or stolen devices immediately</li>
+                                    <li>Don't store PHI on personal devices without approval</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never:</strong>
+                                        <ul>
+                                            <li>Share your login credentials</li>
+                                            <li>Access patient records out of curiosity</li>
+                                            <li>Send PHI via unencrypted text or personal email</li>
+                                            <li>Leave PHI unattended in public areas</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Security Rule Guidance',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'A colleague asks to borrow your login credentials because they forgot theirs and need to access a patient record quickly. What should you do?',
+                            options: [
+                                'Share your login—it\'s urgent and they\'re an authorized employee',
+                                'Refuse and tell them to reset their password through proper channels',
+                                'Log in for them and let them use your computer',
+                                'Share your password but ask them to change it after'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'Never share login credentials, even with authorized colleagues. Each person must use their own unique ID so all access is properly tracked. Password sharing violates HIPAA and makes audit trails meaningless. The colleague should reset their password through proper channels.'
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Working Remotely',
+                            context: 'You\'re working from a coffee shop and need to access patient records to complete an urgent task. The WiFi is free and convenient, but you notice it\'s an open network (no password required).',
+                            choices: [
+                                {
+                                    text: 'Connect and access records—you have a deadline',
+                                    correct: false,
+                                    feedback: 'Open WiFi networks are not secure—data can be intercepted. Accessing ePHI over unsecured networks violates the Security Rule\'s transmission security requirements.'
+                                },
+                                {
+                                    text: 'Use your phone\'s mobile hotspot with VPN to access records securely',
+                                    correct: true,
+                                    feedback: 'Correct! Using a mobile hotspot (which is encrypted) combined with VPN provides secure transmission. This meets the Security Rule\'s requirements for protecting ePHI during transmission.'
+                                },
+                                {
+                                    text: 'Access records but don\'t download anything',
+                                    correct: false,
+                                    feedback: 'Even viewing ePHI over an unsecured network exposes the data to interception. The Security Rule requires encryption for ePHI transmission regardless of whether you\'re downloading.'
+                                },
+                                {
+                                    text: 'Ask the coffee shop if their WiFi is HIPAA-compliant',
+                                    correct: false,
+                                    feedback: 'Public WiFi networks are almost never HIPAA-compliant, and staff wouldn\'t have reliable information about security. You need to use known-secure connections.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Breach Notification
+                // ========================================
+                {
+                    title: 'Breach Notification',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'What is a Breach?',
+                            content: `
+                                <p>A <strong>breach</strong> under HIPAA is the unauthorized acquisition, access, use, or disclosure of PHI that compromises its security or privacy.</p>
+
+                                <h4>Examples of Breaches</h4>
+                                <ul>
+                                    <li>Lost or stolen laptop containing unencrypted patient data</li>
+                                    <li>Employee accessing records without authorization</li>
+                                    <li>Misdirected email containing PHI sent to wrong recipient</li>
+                                    <li>Ransomware attack that exposes patient data</li>
+                                    <li>Paper records improperly disposed of in regular trash</li>
+                                    <li>Verbal disclosure of PHI to unauthorized person</li>
+                                </ul>
+
+                                <h4>Breach Exceptions</h4>
+                                <p>Not every incident is a reportable breach. Exceptions include:</p>
+                                <ul>
+                                    <li><strong>Unintentional access</strong> by workforce member acting in good faith</li>
+                                    <li><strong>Inadvertent disclosure</strong> to another authorized person at same organization</li>
+                                    <li><strong>Good faith belief</strong> that unauthorized person couldn't retain the information</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>When in doubt, report it.</strong> Let your Privacy Officer determine whether it qualifies as a breach. You should report any potential incident immediately.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Breach Notification Rule',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Breach Notification Requirements',
+                            content: `
+                                <h4>Who Must Be Notified?</h4>
+
+                                <p><strong>Affected Individuals</strong></p>
+                                <ul>
+                                    <li>Notification required within <strong>60 days</strong> of discovery</li>
+                                    <li>Must include: what happened, types of information involved, protective steps, what you're doing to investigate and prevent future breaches</li>
+                                </ul>
+
+                                <p><strong>HHS Secretary</strong></p>
+                                <ul>
+                                    <li>Breaches affecting <strong>500+ individuals:</strong> Notify within 60 days</li>
+                                    <li>Breaches affecting <strong>fewer than 500:</strong> May notify annually</li>
+                                </ul>
+
+                                <p><strong>Media</strong></p>
+                                <ul>
+                                    <li>Required for breaches affecting <strong>500+ residents of a state</strong></li>
+                                    <li>Must provide notice to prominent media outlets</li>
+                                </ul>
+
+                                <h4>Business Associate Obligations</h4>
+                                <p>Business associates must notify the covered entity of breaches within <strong>60 days</strong> (or as specified in the BAA).</p>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">📰</span>
+                                    <div>
+                                        <strong>Reputational Impact:</strong> Large breaches are posted publicly on the HHS "Wall of Shame" and often make headlines. Prevention is far better than breach response.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Breach Notification Requirements',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Reporting Security Incidents',
+                            content: `
+                                <h4>What to Report</h4>
+                                <p>Report any incident that might involve PHI:</p>
+                                <ul>
+                                    <li>Lost or stolen devices (laptops, phones, USB drives)</li>
+                                    <li>Suspicious emails or phishing attempts</li>
+                                    <li>Unauthorized access to systems or records</li>
+                                    <li>Misdirected faxes, emails, or mail</li>
+                                    <li>Overheard conversations about patients</li>
+                                    <li>Papers or files left in unsecured locations</li>
+                                    <li>Any suspicious or unusual system activity</li>
+                                </ul>
+
+                                <h4>How to Report</h4>
+                                <ul>
+                                    <li>Report immediately—don't wait</li>
+                                    <li>Contact your Privacy/Security Officer or use your incident reporting system</li>
+                                    <li>Provide as much detail as possible</li>
+                                    <li>Don't try to investigate or fix it yourself</li>
+                                    <li>Preserve any evidence</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>No Retaliation:</strong> HIPAA prohibits retaliation against employees who report violations in good faith. You're protected for doing the right thing.
+                                    </div>
+                                </div>
+
+                                <h4>After Reporting</h4>
+                                <ul>
+                                    <li>Cooperate with any investigation</li>
+                                    <li>Don't discuss the incident outside proper channels</li>
+                                    <li>Follow any instructions from Privacy/Security Officer</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Security Incident Procedures',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'You accidentally send an email containing patient information to the wrong person (someone outside your organization). What should you do?',
+                            options: [
+                                'Delete the email from your sent folder and hope they don\'t notice',
+                                'Send a follow-up email asking them to delete it',
+                                'Report the incident to your Privacy Officer immediately',
+                                'Wait to see if the person contacts you about it'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'Report the incident to your Privacy Officer immediately. This is a potential breach that needs to be assessed and documented. The Privacy Officer will determine next steps, which may include contacting the recipient and evaluating notification requirements.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: HIPAA Violations & Best Practices
+                // ========================================
+                {
+                    title: 'Violations & Best Practices',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'HIPAA Violation Penalties',
+                            content: `
+                                <p>HIPAA violations carry significant penalties for both organizations and individuals.</p>
+
+                                <h4>Civil Penalties (Per Violation)</h4>
+                                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                                    <tr style="background: var(--gray-100);">
+                                        <th style="padding: 12px; text-align: left;">Violation Type</th>
+                                        <th style="padding: 12px; text-align: left;">Penalty Range</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Didn't know (and couldn't have known)</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">$100 - $50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Reasonable cause (not willful neglect)</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">$1,000 - $50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Willful neglect (corrected)</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">$10,000 - $50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Willful neglect (not corrected)</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">$50,000+</td>
+                                    </tr>
+                                </table>
+                                <p><strong>Annual maximum:</strong> $1.5 million per violation category</p>
+
+                                <h4>Criminal Penalties</h4>
+                                <p>For individuals who knowingly obtain or disclose PHI:</p>
+                                <ul>
+                                    <li><strong>Knowingly:</strong> Up to $50,000 fine and 1 year in prison</li>
+                                    <li><strong>Under false pretenses:</strong> Up to $100,000 fine and 5 years</li>
+                                    <li><strong>For personal gain or harm:</strong> Up to $250,000 fine and 10 years</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Individual Liability:</strong> You can be personally liable for HIPAA violations—these aren't just organizational penalties.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'HIPAA Enforcement',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Common HIPAA Violations',
+                            content: `
+                                <p>Learn from others' mistakes. These are the most common HIPAA violations:</p>
+
+                                <h4>1. Unauthorized Access</h4>
+                                <p>"Snooping" in records of family, friends, celebrities, or coworkers without a work-related reason.</p>
+
+                                <h4>2. Lost/Stolen Devices</h4>
+                                <p>Unencrypted laptops, phones, or USB drives containing PHI that are lost or stolen.</p>
+
+                                <h4>3. Social Media Disclosures</h4>
+                                <p>Posting about patients on social media, even without using names (contexts can identify patients).</p>
+
+                                <h4>4. Improper Disposal</h4>
+                                <p>Throwing paper records in regular trash or donating computers without proper data wiping.</p>
+
+                                <h4>5. Unauthorized Disclosures</h4>
+                                <p>Sharing PHI with family members without authorization, or discussing patients in public areas.</p>
+
+                                <h4>6. Lack of Safeguards</h4>
+                                <p>Failing to implement required security measures—no encryption, no audit logs, no access controls.</p>
+
+                                <h4>7. Failure to Provide Access</h4>
+                                <p>Not responding to patient requests for their records within required timeframes.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>The "Curious Employee" Problem:</strong> One of the most common violations is employees accessing records of patients they're not treating—family members, celebrities, or just curiosity. All access is logged and audited.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Enforcement Highlights',
+                                    url: 'https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/data/enforcement-highlights/index.html',
+                                    org: 'HHS.gov'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Celebrity Patient',
+                            context: 'A famous celebrity is admitted to your hospital. A coworker mentions it in the break room and suggests you look up their records to see what they\'re being treated for. You have technical access to the medical records system.',
+                            choices: [
+                                {
+                                    text: 'Look up the records—you\'re just curious, and you won\'t tell anyone',
+                                    correct: false,
+                                    feedback: 'This is a HIPAA violation. Accessing patient records without a work-related reason is unauthorized access, regardless of whether you share the information. Every access is logged and can be audited.'
+                                },
+                                {
+                                    text: 'Look at only the basic information, not detailed medical records',
+                                    correct: false,
+                                    feedback: 'ANY unauthorized access is a violation. Even viewing basic registration information without a work-related need violates HIPAA. There\'s no "minor" unauthorized access.'
+                                },
+                                {
+                                    text: 'Decline and remind your coworker that accessing records without a work reason violates HIPAA',
+                                    correct: true,
+                                    feedback: 'Correct! You should only access records when you have a work-related need. Curiosity is never a valid reason. Speaking up also helps protect your coworker from making a career-ending mistake.'
+                                },
+                                {
+                                    text: 'Don\'t access the records but don\'t say anything to your coworker',
+                                    correct: false,
+                                    feedback: 'While not accessing the records is correct, you should also speak up. Your coworker is suggesting a violation, and organizations are required to sanction employees who violate HIPAA.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. Know what PHI is</strong><br>
+                                Any information that identifies a patient and relates to their health or healthcare—in any form (paper, electronic, verbal).</p>
+
+                                <p><strong>2. Minimum necessary standard</strong><br>
+                                Only access, use, or share the minimum PHI needed for your job function.</p>
+
+                                <p><strong>3. Patients have rights</strong><br>
+                                Rights to access, amend, and receive an accounting of disclosures of their information.</p>
+
+                                <p><strong>4. Security is everyone's job</strong><br>
+                                Use strong passwords, lock workstations, encrypt devices, and follow security policies.</p>
+
+                                <p><strong>5. Report incidents immediately</strong><br>
+                                Don't wait, don't investigate yourself—report any potential breach or violation right away.</p>
+
+                                <p><strong>6. Violations have serious consequences</strong><br>
+                                Fines, criminal penalties, job loss, and reputational damage can result from HIPAA violations.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">🏥</span>
+                                    <div>
+                                        <strong>Remember:</strong> HIPAA exists to protect patients. When you follow HIPAA, you're ensuring people can trust the healthcare system with their most sensitive information.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing HIPAA Compliance Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
