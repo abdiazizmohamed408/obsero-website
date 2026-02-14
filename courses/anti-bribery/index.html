@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Bribery & Corruption Training | Obsero</title>
+    <meta name="description" content="Learn anti-bribery compliance: FCPA, UK Bribery Act, recognizing red flags, gifts & hospitality rules, and third-party due diligence.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">Anti-Bribery & Corruption</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list"></nav>
+        </aside>
+
+        <main class="course-main">
+            <div class="module-header"></div>
+            <div class="content-area"></div>
+        </main>
+
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        course = new ObseroCourse({
+            courseId: 'anti-bribery',
+            courseTitle: 'Anti-Bribery & Corruption Training',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: Understanding Bribery & Corruption
+                // ========================================
+                {
+                    title: 'Understanding Bribery & Corruption',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to Anti-Bribery Training',
+                            content: `
+                                <p>This course covers anti-bribery and anti-corruption laws and your responsibilities for maintaining ethical business practices.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 35 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>What constitutes bribery and corruption</li>
+                                    <li>Key laws: FCPA, UK Bribery Act, and others</li>
+                                    <li>Recognizing red flags and warning signs</li>
+                                    <li>Rules for gifts, hospitality, and entertainment</li>
+                                    <li>Third-party and supplier risks</li>
+                                    <li>How to report concerns</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Serious Consequences:</strong> Bribery violations can result in criminal prosecution, massive fines (hundreds of millions of dollars), imprisonment, and career-ending consequences for individuals.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'FCPA Resource Guide',
+                                    url: 'https://www.justice.gov/criminal-fraud/fcpa-guidance',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is Bribery?',
+                            content: `
+                                <p><strong>Bribery</strong> is offering, giving, receiving, or soliciting something of value to influence the actions of an official or other person in a position of trust.</p>
+
+                                <h4>Forms of Bribery</h4>
+                                <ul>
+                                    <li><strong>Cash payments:</strong> Direct money transfers</li>
+                                    <li><strong>Gifts:</strong> Expensive items, luxury goods</li>
+                                    <li><strong>Travel & entertainment:</strong> Lavish trips, events</li>
+                                    <li><strong>Jobs or contracts:</strong> For family members or associates</li>
+                                    <li><strong>Charitable donations:</strong> To entities controlled by officials</li>
+                                    <li><strong>Political contributions:</strong> To gain favor</li>
+                                    <li><strong>Loans:</strong> That aren't intended to be repaid</li>
+                                </ul>
+
+                                <h4>Corruption Beyond Bribery</h4>
+                                <p>Corruption also includes:</p>
+                                <ul>
+                                    <li><strong>Embezzlement:</strong> Stealing entrusted funds</li>
+                                    <li><strong>Extortion:</strong> Demanding payments under threat</li>
+                                    <li><strong>Fraud:</strong> Deception for financial gain</li>
+                                    <li><strong>Kickbacks:</strong> Secret payments for favorable treatment</li>
+                                    <li><strong>Conflicts of interest:</strong> Self-dealing, undisclosed relationships</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Key Point:</strong> Bribery doesn't require the bribe to succeed. The attempt alone is illegal—even if the official refuses or nothing changes.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'UK Bribery Act Guidance',
+                                    url: 'https://www.justice.gov.uk/downloads/legislation/bribery-act-2010-guidance.pdf',
+                                    org: 'UK Ministry of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Why Anti-Bribery Matters',
+                            content: `
+                                <h4>The Global Impact of Corruption</h4>
+                                <p>The World Bank estimates corruption costs the global economy over <strong>$2.6 trillion annually</strong>—about 5% of global GDP.</p>
+
+                                <h4>Consequences for Companies</h4>
+                                <ul>
+                                    <li><strong>Massive fines:</strong> Billions of dollars in penalties</li>
+                                    <li><strong>Criminal prosecution:</strong> Of the company and executives</li>
+                                    <li><strong>Debarment:</strong> Banned from government contracts</li>
+                                    <li><strong>Reputation damage:</strong> Lost business and partnerships</li>
+                                    <li><strong>Share price drops:</strong> Significant value destruction</li>
+                                </ul>
+
+                                <h4>Consequences for Individuals</h4>
+                                <ul>
+                                    <li><strong>Criminal charges:</strong> Personal prosecution</li>
+                                    <li><strong>Prison time:</strong> Up to 20 years under FCPA</li>
+                                    <li><strong>Personal fines:</strong> Up to $250,000 per violation</li>
+                                    <li><strong>Career destruction:</strong> Industry bans, unemployable</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">⚖️</span>
+                                    <div>
+                                        <strong>Recent Cases:</strong> Goldman Sachs paid $2.9 billion for 1MDB scandal. Airbus paid $4 billion. Ericsson paid $1 billion. Individuals have received prison sentences of 5+ years.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'FCPA Enforcement Statistics',
+                                    url: 'https://www.justice.gov/criminal-fraud/related-enforcement-actions',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following could constitute bribery?',
+                            options: [
+                                'Only cash payments to government officials',
+                                'Any form of value—cash, gifts, travel, jobs—given to improperly influence decisions',
+                                'Only payments that successfully achieve their intended result',
+                                'Only payments to foreign officials, not domestic ones'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'Bribery includes any form of value—not just cash—given to improperly influence decisions. This includes gifts, travel, entertainment, jobs for relatives, charitable donations, and more. The attempt alone is illegal, even if unsuccessful.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: Key Anti-Bribery Laws
+                // ========================================
+                {
+                    title: 'Key Anti-Bribery Laws',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'The U.S. Foreign Corrupt Practices Act (FCPA)',
+                            content: `
+                                <p>The <strong>FCPA</strong> is the foundational U.S. anti-bribery law, enacted in 1977.</p>
+
+                                <h4>Two Main Provisions</h4>
+
+                                <p><strong>1. Anti-Bribery Provisions</strong></p>
+                                <p>Prohibits paying bribes to foreign government officials to obtain or retain business.</p>
+                                <ul>
+                                    <li>Applies to U.S. persons and companies</li>
+                                    <li>Applies to foreign companies listed on U.S. exchanges</li>
+                                    <li>Applies to any acts within U.S. territory</li>
+                                </ul>
+
+                                <p><strong>2. Books and Records Provisions</strong></p>
+                                <p>Requires accurate record-keeping and internal controls.</p>
+                                <ul>
+                                    <li>No "off-books" accounts or payments</li>
+                                    <li>Adequate internal accounting controls</li>
+                                    <li>Applies to all publicly traded companies</li>
+                                </ul>
+
+                                <h4>Penalties</h4>
+                                <ul>
+                                    <li><strong>Companies:</strong> Up to $25 million per violation</li>
+                                    <li><strong>Individuals:</strong> Up to $250,000 and 5-20 years prison</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">🌍</span>
+                                    <div>
+                                        <strong>Extraterritorial Reach:</strong> The FCPA applies to conduct outside the U.S. if there's any U.S. connection—dollar payments, U.S. email servers, or involvement of U.S. persons.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'FCPA Resource Guide',
+                                    url: 'https://www.justice.gov/criminal-fraud/fcpa-guidance',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'The UK Bribery Act 2010',
+                            content: `
+                                <p>The <strong>UK Bribery Act</strong> is considered the strictest anti-bribery law in the world.</p>
+
+                                <h4>Four Offenses</h4>
+                                <ol>
+                                    <li><strong>Bribing another person:</strong> Offering/giving bribes</li>
+                                    <li><strong>Being bribed:</strong> Requesting/receiving bribes</li>
+                                    <li><strong>Bribing foreign public officials:</strong> Similar to FCPA</li>
+                                    <li><strong>Corporate failure to prevent bribery:</strong> Strict liability!</li>
+                                </ol>
+
+                                <h4>Key Differences from FCPA</h4>
+                                <ul>
+                                    <li><strong>Covers private-sector bribery</strong> (not just government officials)</li>
+                                    <li><strong>No facilitating payments exception</strong></li>
+                                    <li><strong>Strict corporate liability</strong> unless "adequate procedures" defense</li>
+                                    <li><strong>Broader territorial reach</strong></li>
+                                </ul>
+
+                                <h4>Adequate Procedures Defense</h4>
+                                <p>A company can defend against "failure to prevent" charges by showing it had adequate anti-bribery procedures in place.</p>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>No Facilitation Payments:</strong> Unlike FCPA, the UK Bribery Act does not exempt "facilitation payments" (small payments to speed up routine actions). ALL bribes are prohibited.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'The Bribery Act 2010 Guidance',
+                                    url: 'https://www.justice.gov.uk/downloads/legislation/bribery-act-2010-guidance.pdf',
+                                    org: 'UK Ministry of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Other Global Anti-Bribery Laws',
+                            content: `
+                                <h4>🇨🇦 Canada: CFPOA</h4>
+                                <p>The Corruption of Foreign Public Officials Act:</p>
+                                <ul>
+                                    <li>Similar to FCPA but applies to any Canadian business</li>
+                                    <li>Penalties up to 14 years imprisonment</li>
+                                    <li>No territorial limitations for Canadian citizens</li>
+                                </ul>
+
+                                <h4>🇪🇺 European Union</h4>
+                                <ul>
+                                    <li>EU Anti-Corruption Directive harmonizes laws</li>
+                                    <li>Each member state has national laws</li>
+                                    <li>Strong enforcement in Germany, France, Netherlands</li>
+                                </ul>
+
+                                <h4>🌏 Other Major Laws</h4>
+                                <ul>
+                                    <li><strong>Brazil:</strong> Clean Company Act (strict liability)</li>
+                                    <li><strong>China:</strong> Anti-Unfair Competition Law</li>
+                                    <li><strong>France:</strong> Sapin II (FCPA-style with prevention requirements)</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🌍</span>
+                                    <div>
+                                        <strong>Global Reach:</strong> If you do business internationally, you may be subject to multiple anti-bribery laws simultaneously. Compliance must meet the highest standard.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Corruption of Foreign Public Officials Act',
+                                    url: 'https://laws-lois.justice.gc.ca/eng/acts/c-45.2/',
+                                    org: 'Government of Canada'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'What makes the UK Bribery Act stricter than the FCPA?',
+                            options: [
+                                'It only applies to government officials',
+                                'It has lower penalties',
+                                'It covers private-sector bribery and has no facilitation payment exception',
+                                'It only applies within the UK'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'The UK Bribery Act is stricter because it covers bribery in the private sector (not just government), prohibits all facilitation payments (FCPA has limited exceptions), and has strict corporate liability for failure to prevent bribery.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: Red Flags & Warning Signs
+                // ========================================
+                {
+                    title: 'Red Flags & Warning Signs',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Recognizing Bribery Red Flags',
+                            content: `
+                                <h4>Third-Party Red Flags</h4>
+                                <ul>
+                                    <li>Agent refuses to certify compliance with anti-bribery laws</li>
+                                    <li>Unusual payment requests (cash, third-party accounts, tax havens)</li>
+                                    <li>Vague or excessive service descriptions</li>
+                                    <li>Agent has close ties to government officials</li>
+                                    <li>Agent was suggested by a government official</li>
+                                    <li>Agent lacks qualifications or facilities</li>
+                                    <li>Commission rates above market norms</li>
+                                </ul>
+
+                                <h4>Transaction Red Flags</h4>
+                                <ul>
+                                    <li>Requests for unusual payment arrangements</li>
+                                    <li>Payments to countries different from transaction</li>
+                                    <li>Requests for fake invoices or documentation</li>
+                                    <li>Unusually large or round-number payments</li>
+                                    <li>No legitimate business purpose for payment</li>
+                                </ul>
+
+                                <h4>Process Red Flags</h4>
+                                <ul>
+                                    <li>Contract awarded despite not being lowest bidder</li>
+                                    <li>Urgency to close deal before proper approvals</li>
+                                    <li>Requests to avoid proper procurement procedures</li>
+                                    <li>Lack of due diligence documentation</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>"I Don't Want to Know":</strong> Willful blindness is not a defense. Deliberately ignoring obvious warning signs creates personal liability.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'FCPA Red Flags',
+                                    url: 'https://www.justice.gov/criminal-fraud/fcpa-guidance',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Third-Party Agent Proposal',
+                            context: 'Your company is trying to win a government contract in a country known for corruption. A local consultant offers to "help with the process" for a 15% commission (market rate is 3-5%). When asked about their methods, they say "Don\'t worry about the details, I know the right people."',
+                            choices: [
+                                {
+                                    text: 'Accept their help—they clearly have connections that can help win the contract',
+                                    correct: false,
+                                    feedback: 'Multiple red flags: excessive commission, vague about methods, "knowing the right people," and refusing to explain their approach. These are classic indicators of potential bribery through an intermediary.'
+                                },
+                                {
+                                    text: 'Ask them to reduce their commission to 5% to match market rates',
+                                    correct: false,
+                                    feedback: 'The commission rate is only one red flag. The bigger concern is their refusal to explain their methods and vague references to "knowing people." These suggest potential bribery regardless of commission percentage.'
+                                },
+                                {
+                                    text: 'Decline and report the proposal to your compliance team',
+                                    correct: true,
+                                    feedback: 'Correct! This proposal has multiple serious red flags. The appropriate response is to decline and report to compliance. Using this agent could make your company liable for any bribes they pay, even if you didn\'t authorize them explicitly.'
+                                },
+                                {
+                                    text: 'Accept but include strong anti-bribery language in the contract',
+                                    correct: false,
+                                    feedback: 'Contract language doesn\'t protect you if you engage someone showing clear signs of corrupt intent. Companies have been held liable for agent bribes despite having anti-bribery clauses. The red flags here require declining the engagement entirely.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'High-Risk Situations',
+                            content: `
+                                <h4>High-Risk Countries</h4>
+                                <p>Exercise enhanced diligence in countries with:</p>
+                                <ul>
+                                    <li>Low scores on Transparency International's Corruption Perceptions Index</li>
+                                    <li>Weak rule of law or enforcement</li>
+                                    <li>History of bribery in your industry</li>
+                                </ul>
+
+                                <h4>High-Risk Interactions</h4>
+                                <ul>
+                                    <li>Government contracting and procurement</li>
+                                    <li>Permits, licenses, and regulatory approvals</li>
+                                    <li>Customs and import/export</li>
+                                    <li>Tax matters and inspections</li>
+                                    <li>State-owned enterprises</li>
+                                </ul>
+
+                                <h4>High-Risk Relationships</h4>
+                                <ul>
+                                    <li>Sales agents and distributors</li>
+                                    <li>Customs brokers</li>
+                                    <li>Consultants and advisors</li>
+                                    <li>Joint venture partners</li>
+                                    <li>Suppliers in high-risk regions</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🔍</span>
+                                    <div>
+                                        <strong>Enhanced Due Diligence:</strong> High-risk situations require deeper investigation—background checks, reference verification, understanding of business relationships, and ongoing monitoring.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Corruption Perceptions Index',
+                                    url: 'https://www.transparency.org/cpi',
+                                    org: 'Transparency International'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'A government official reviewing your permit application suggests using their brother\'s consulting firm to "expedite" the process. What is this situation?',
+                            options: [
+                                'A helpful recommendation—they know the process',
+                                'A conflict of interest and potential bribery red flag',
+                                'Standard practice in government contracting',
+                                'Only a problem if you actually pay the brother'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'This is a major red flag—a government official steering business to a family member in exchange for favorable treatment is a classic conflict of interest and potential bribery setup. The suggestion itself should be reported to compliance, regardless of whether you engage the firm.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Gifts, Hospitality & Payments
+                // ========================================
+                {
+                    title: 'Gifts, Hospitality & Payments',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Gifts and Entertainment Rules',
+                            content: `
+                                <p>Not all gifts are bribes—but the line can be thin. Follow these principles:</p>
+
+                                <h4>Generally Acceptable</h4>
+                                <ul>
+                                    <li>Modest gifts of nominal value</li>
+                                    <li>Business meals at reasonable restaurants</li>
+                                    <li>Promotional items with company logo</li>
+                                    <li>Gifts that are customary in the culture (with limits)</li>
+                                </ul>
+
+                                <h4>Generally Not Acceptable</h4>
+                                <ul>
+                                    <li>Cash or cash equivalents (gift cards)</li>
+                                    <li>Luxury items or expensive gifts</li>
+                                    <li>Entertainment for family members</li>
+                                    <li>Gifts during active procurement/negotiations</li>
+                                    <li>Anything that could create an obligation</li>
+                                </ul>
+
+                                <h4>The "Newspaper Test"</h4>
+                                <p>Would you be comfortable if this gift or entertainment appeared on the front page of a newspaper? If not, don't do it.</p>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Government Officials:</strong> Gifts to government officials face stricter rules. Many government employees are prohibited from accepting ANY gifts. Always check applicable rules before offering anything.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'FCPA Guidance on Gifts',
+                                    url: 'https://www.justice.gov/criminal-fraud/fcpa-guidance',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Travel and Hospitality',
+                            content: `
+                                <h4>Acceptable Travel & Hospitality</h4>
+                                <ul>
+                                    <li>Travel directly related to legitimate business purpose</li>
+                                    <li>Reasonable accommodations (not luxury)</li>
+                                    <li>Meals during business discussions</li>
+                                    <li>Site visits for product demonstrations</li>
+                                </ul>
+
+                                <h4>Not Acceptable</h4>
+                                <ul>
+                                    <li>First-class travel when economy is standard</li>
+                                    <li>Luxury hotels beyond company standards</li>
+                                    <li>Travel for spouse/family members</li>
+                                    <li>Vacation destinations disguised as business</li>
+                                    <li>Extended stays beyond business needs</li>
+                                    <li>Cash allowances beyond documented expenses</li>
+                                </ul>
+
+                                <h4>Documentation Requirements</h4>
+                                <ul>
+                                    <li>Document the business purpose clearly</li>
+                                    <li>Pre-approve significant hospitality</li>
+                                    <li>Keep all receipts and records</li>
+                                    <li>Report accurately in expense systems</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">✈️</span>
+                                    <div>
+                                        <strong>Best Practice:</strong> If hosting government officials, pay vendors directly rather than providing cash. Have officials arrange their own travel when possible. Keep everything documented and business-focused.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Client Entertainment Request',
+                            context: 'A key client (a government procurement officer) mentions that they\'d love to attend a major sporting event. Tickets cost $2,000 each. They hint that your company securing tickets would "really strengthen the partnership" right before a major contract decision.',
+                            choices: [
+                                {
+                                    text: 'Buy the tickets—it\'s just relationship-building and common in business',
+                                    correct: false,
+                                    feedback: 'The timing (before a contract decision), the person (government procurement officer), the value ($2,000), and the implicit quid pro quo ("strengthen the partnership") all indicate this would likely be considered a bribe.'
+                                },
+                                {
+                                    text: 'Offer less expensive tickets to a different event instead',
+                                    correct: false,
+                                    feedback: 'The value isn\'t the only problem. Providing any entertainment to a government official during an active procurement process, with an implied expectation of favorable treatment, is problematic regardless of the dollar amount.'
+                                },
+                                {
+                                    text: 'Politely decline and explain that company policy doesn\'t permit gifts during active procurements',
+                                    correct: true,
+                                    feedback: 'Correct! Decline politely, citing company policy. The combination of timing, value, recipient (government official), and implicit quid pro quo creates serious bribery risk. Report this interaction to compliance as well.'
+                                },
+                                {
+                                    text: 'Check if tickets under $500 would be acceptable',
+                                    correct: false,
+                                    feedback: 'Dollar thresholds don\'t make bribes legal. The issue is providing something of value to improperly influence a government decision. During active procurement, any gift to decision-makers is high-risk regardless of value.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Facilitation Payments',
+                            content: `
+                                <p><strong>Facilitation payments</strong> (also called "grease payments") are small payments to low-level officials to speed up routine, non-discretionary actions.</p>
+
+                                <h4>Examples</h4>
+                                <ul>
+                                    <li>Payment to speed up visa processing</li>
+                                    <li>Payment to clear goods through customs faster</li>
+                                    <li>Payment to get utilities connected quicker</li>
+                                </ul>
+
+                                <h4>Legal Status</h4>
+                                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                                    <tr style="background: var(--gray-100);">
+                                        <th style="padding: 12px; text-align: left;">Law</th>
+                                        <th style="padding: 12px; text-align: left;">Facilitation Payments</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">FCPA (US)</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Limited exception exists</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">UK Bribery Act</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);"><strong>Prohibited</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Canada CFPOA</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);"><strong>Prohibited</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Local laws</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Usually prohibited</td>
+                                    </tr>
+                                </table>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Company Policy:</strong> Most companies prohibit all facilitation payments regardless of technical legal exceptions. Even where technically legal under FCPA, they're often illegal locally and create cultural problems.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'FCPA Facilitation Payments',
+                                    url: 'https://www.justice.gov/criminal-fraud/fcpa-guidance',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: Compliance & Reporting
+                // ========================================
+                {
+                    title: 'Compliance & Reporting',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Third-Party Due Diligence',
+                            content: `
+                                <p>Third parties (agents, consultants, distributors) create the highest bribery risk. Companies have been held liable for bribes paid by third parties on their behalf.</p>
+
+                                <h4>Before Engaging Third Parties</h4>
+                                <ul>
+                                    <li><strong>Business justification:</strong> Why is this third party needed?</li>
+                                    <li><strong>Background check:</strong> Ownership, reputation, legal history</li>
+                                    <li><strong>Government connections:</strong> Are owners/employees government officials?</li>
+                                    <li><strong>Qualifications:</strong> Do they have legitimate expertise?</li>
+                                    <li><strong>References:</strong> Verify with other clients</li>
+                                </ul>
+
+                                <h4>Contract Requirements</h4>
+                                <ul>
+                                    <li>Anti-corruption representations and warranties</li>
+                                    <li>Right to audit</li>
+                                    <li>Compliance with all applicable laws</li>
+                                    <li>Termination rights for violations</li>
+                                    <li>Accurate record-keeping requirements</li>
+                                </ul>
+
+                                <h4>Ongoing Monitoring</h4>
+                                <ul>
+                                    <li>Periodic re-certification</li>
+                                    <li>Review of invoices and payments</li>
+                                    <li>Updates on ownership or government relationships</li>
+                                    <li>Red flag monitoring</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Third-Party Due Diligence Guidance',
+                                    url: 'https://www.justice.gov/criminal-fraud/fcpa-guidance',
+                                    org: 'U.S. Department of Justice'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Reporting Concerns',
+                            content: `
+                                <h4>What to Report</h4>
+                                <ul>
+                                    <li>Requests for improper payments</li>
+                                    <li>Offers of gifts that seem inappropriate</li>
+                                    <li>Unusual payment requests from third parties</li>
+                                    <li>Suspicious agent or consultant behavior</li>
+                                    <li>Red flags you've observed</li>
+                                    <li>Pressure to bypass procedures</li>
+                                </ul>
+
+                                <h4>How to Report</h4>
+                                <ul>
+                                    <li>Report to your manager (unless they're involved)</li>
+                                    <li>Contact your Compliance or Legal department</li>
+                                    <li>Use the Ethics Hotline (anonymous reporting available)</li>
+                                </ul>
+
+                                <h4>You're Protected</h4>
+                                <ul>
+                                    <li><strong>No retaliation:</strong> Company policy and law prohibit retaliation</li>
+                                    <li><strong>Confidentiality:</strong> Reports are handled confidentially</li>
+                                    <li><strong>Whistleblower protections:</strong> Legal protections for good-faith reports</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">📢</span>
+                                    <div>
+                                        <strong>Speaking Up Protects Everyone:</strong> Early reporting prevents small problems from becoming major violations. Your vigilance protects the company, your colleagues, and yourself.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SEC Whistleblower Program',
+                                    url: 'https://www.sec.gov/whistleblower',
+                                    org: 'U.S. Securities and Exchange Commission'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. Bribery includes any form of value</strong><br>
+                                Cash, gifts, travel, jobs—anything given to improperly influence decisions.</p>
+
+                                <p><strong>2. Multiple laws may apply</strong><br>
+                                FCPA, UK Bribery Act, and local laws can all apply to the same conduct.</p>
+
+                                <p><strong>3. Third parties create high risk</strong><br>
+                                You can be liable for bribes paid by agents on your behalf.</p>
+
+                                <p><strong>4. Know the red flags</strong><br>
+                                Unusual payments, vague services, excessive commissions, government connections.</p>
+
+                                <p><strong>5. Gifts require care</strong><br>
+                                Modest, documented, not during procurement, and nothing that creates obligations.</p>
+
+                                <p><strong>6. When in doubt, ask</strong><br>
+                                Consult Compliance before proceeding with anything questionable.</p>
+
+                                <p><strong>7. Report concerns</strong><br>
+                                Early reporting prevents violations. You're protected against retaliation.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">⚖️</span>
+                                    <div>
+                                        <strong>Remember:</strong> Your ethical conduct protects the company, your colleagues, and your own career. When pressured to cut corners, the right answer is always no.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing Anti-Bribery & Corruption Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>

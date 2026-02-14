@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="obsero_anti_bribery_v1" version="1.0"
+    xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+    xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+    </metadata>
+    
+    <organizations default="obsero_antibribery_org">
+        <organization identifier="obsero_antibribery_org">
+            <title>Anti-Bribery & Corruption Training</title>
+            
+            <item identifier="module1" identifierref="module1_resource">
+                <title>Module 1: Understanding Bribery & Corruption</title>
+            </item>
+            <item identifier="module2" identifierref="module2_resource">
+                <title>Module 2: Key Anti-Bribery Laws</title>
+            </item>
+            <item identifier="module3" identifierref="module3_resource">
+                <title>Module 3: Red Flags & Warning Signs</title>
+            </item>
+            <item identifier="module4" identifierref="module4_resource">
+                <title>Module 4: Gifts, Hospitality & Payments</title>
+            </item>
+            <item identifier="module5" identifierref="module5_resource">
+                <title>Module 5: Compliance & Reporting</title>
+            </item>
+        </organization>
+    </organizations>
+    
+    <resources>
+        <resource identifier="module1_resource" type="webcontent" adlcp:scormtype="sco" href="index.html">
+            <file href="index.html"/>
+            <file href="css/course.css"/>
+            <file href="js/scormAPI.js"/>
+            <file href="js/course.js"/>
+        </resource>
+        <resource identifier="module2_resource" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+        <resource identifier="module3_resource" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+        <resource identifier="module4_resource" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+        <resource identifier="module5_resource" type="webcontent" adlcp:scormtype="asset" href="index.html"/>
+    </resources>
+</manifest>
