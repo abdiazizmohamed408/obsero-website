@@ -186,6 +186,9 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold">$499<span class="text-sm font-normal text-gray-500">/year</span></span>
+                        <button onclick="checkout('harassment')" class="bg-obsero-950 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-obsero-900 transition">
+                            Buy Now
+                        </button>
                     </div>
                 </div>
 
@@ -205,6 +208,9 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold">$399<span class="text-sm font-normal text-gray-500">/year</span></span>
+                        <button onclick="checkout('cybersecurity')" class="bg-obsero-950 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-obsero-900 transition">
+                            Buy Now
+                        </button>
                     </div>
                 </div>
 
@@ -224,6 +230,9 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold">$399<span class="text-sm font-normal text-gray-500">/year</span></span>
+                        <button onclick="checkout('privacy')" class="bg-obsero-950 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-obsero-900 transition">
+                            Buy Now
+                        </button>
                     </div>
                 </div>
 
@@ -243,6 +252,9 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold">$349<span class="text-sm font-normal text-gray-500">/year</span></span>
+                        <button onclick="checkout('ethics')" class="bg-obsero-950 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-obsero-900 transition">
+                            Buy Now
+                        </button>
                     </div>
                 </div>
 
@@ -262,6 +274,9 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold">$349<span class="text-sm font-normal text-gray-500">/year</span></span>
+                        <button onclick="checkout('safety')" class="bg-obsero-950 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-obsero-900 transition">
+                            Buy Now
+                        </button>
                     </div>
                 </div>
 
@@ -279,7 +294,9 @@
                         <span class="text-sm text-white/50 line-through">$1,995</span>
                         <span class="text-3xl font-bold ml-2">$1,499<span class="text-sm font-normal text-white/70">/year</span></span>
                     </div>
-                    <div class="text-obsero-300 text-sm">Save 25%</div>
+                    <button onclick="checkout('bundle')" class="w-full bg-white text-obsero-950 px-4 py-3 rounded-lg font-semibold hover:bg-gray-100 transition mt-2">
+                        Get Complete Suite
+                    </button>
                 </div>
             </div>
         </div>
@@ -491,7 +508,7 @@
             
             <!-- Contact Form -->
             <div class="max-w-md mx-auto bg-gray-50 rounded-2xl p-8">
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                <form action="https://formspree.io/f/xjkvqpwg" method="POST" class="space-y-4">
                     <input type="text" name="name" placeholder="Your name" required 
                         class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-obsero-500 focus:border-transparent">
                     <input type="email" name="email" placeholder="Work email" required 
@@ -559,5 +576,37 @@
             </div>
         </div>
     </footer>
+
+    <!-- Stripe Checkout Script -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Initialize Stripe with your publishable key
+        // Replace with your actual publishable key from Stripe Dashboard
+        const stripe = Stripe('pk_live_YOUR_PUBLISHABLE_KEY');
+        
+        async function checkout(productId) {
+            try {
+                const response = await fetch('/api/checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ productId }),
+                });
+                
+                const data = await response.json();
+                
+                if (data.url) {
+                    // Redirect to Stripe Checkout
+                    window.location.href = data.url;
+                } else if (data.error) {
+                    alert('Error: ' + data.error);
+                }
+            } catch (error) {
+                console.error('Checkout error:', error);
+                alert('Something went wrong. Please try again or contact support.');
+            }
+        }
+    </script>
 </body>
 </html>

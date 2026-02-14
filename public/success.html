@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Obsero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        obsero: {
+                            50: '#f0f9ff',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            950: '#0a2540',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+        <h1 class="text-2xl font-bold text-gray-900 mb-2">Thank You for Your Purchase!</h1>
+        <p class="text-gray-600 mb-6">
+            We've received your order and you'll receive an email shortly with your SCORM course files and setup instructions.
+        </p>
+        <div class="bg-gray-50 rounded-xl p-4 mb-6 text-left">
+            <h3 class="font-semibold text-gray-900 mb-2">What's Next?</h3>
+            <ul class="text-sm text-gray-600 space-y-2">
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    Check your email for the download link
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    Upload SCORM packages to your LMS
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    Assign courses to your employees
+                </li>
+            </ul>
+        </div>
+        <p class="text-sm text-gray-500 mb-6">
+            Questions? Email us at <a href="mailto:hello@obsero.io" class="text-obsero-600 hover:underline">hello@obsero.io</a>
+        </p>
+        <a href="/" class="inline-block bg-obsero-950 text-white px-6 py-3 rounded-lg font-semibold hover:bg-obsero-900 transition">
+            Back to Home
+        </a>
+    </div>
+</body>
+</html>

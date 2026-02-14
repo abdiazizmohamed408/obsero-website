@@ -2,12 +2,19 @@
   "name": "obsero-website",
   "version": "1.0.0",
   "description": "Obsero - Modern Compliance Training",
+  "main": "server.js",
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'Static site - no build needed'",
-    "preview": "npx serve ."
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": ["compliance", "training", "scorm", "e-learning"],
   "author": "Obsero",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
