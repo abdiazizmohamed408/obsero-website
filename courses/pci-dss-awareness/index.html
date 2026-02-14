@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCI-DSS Awareness Training | Obsero</title>
+    <meta name="description" content="Learn PCI-DSS compliance essentials: protecting cardholder data, the 12 requirements, and your role in maintaining payment card security.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">PCI-DSS Awareness Training</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list"></nav>
+        </aside>
+
+        <main class="course-main">
+            <div class="module-header"></div>
+            <div class="content-area"></div>
+        </main>
+
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        course = new ObseroCourse({
+            courseId: 'pci-dss-awareness',
+            courseTitle: 'PCI-DSS Awareness Training',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: Introduction to PCI-DSS
+                // ========================================
+                {
+                    title: 'Introduction to PCI-DSS',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to PCI-DSS Training',
+                            content: `
+                                <p>This course covers the Payment Card Industry Data Security Standard (PCI-DSS) and your responsibilities for protecting cardholder data.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 35 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>What PCI-DSS is and why it matters</li>
+                                    <li>What cardholder data includes</li>
+                                    <li>The 12 PCI-DSS requirements</li>
+                                    <li>How to handle payment card data securely</li>
+                                    <li>Your specific responsibilities</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">💳</span>
+                                    <div>
+                                        <strong>Who Needs This:</strong> Anyone who handles, processes, stores, or transmits payment card data—or has access to systems that do—must understand and follow PCI-DSS requirements.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS Quick Reference Guide',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is PCI-DSS?',
+                            content: `
+                                <p>The <strong>Payment Card Industry Data Security Standard (PCI-DSS)</strong> is a set of security requirements designed to ensure that all companies that process, store, or transmit credit card information maintain a secure environment.</p>
+
+                                <h4>Who Created PCI-DSS?</h4>
+                                <p>PCI-DSS was created by the <strong>PCI Security Standards Council</strong>, founded by the major payment card brands:</p>
+                                <ul>
+                                    <li>Visa</li>
+                                    <li>Mastercard</li>
+                                    <li>American Express</li>
+                                    <li>Discover</li>
+                                    <li>JCB</li>
+                                </ul>
+
+                                <h4>Who Must Comply?</h4>
+                                <p>PCI-DSS applies to <strong>any organization</strong> that:</p>
+                                <ul>
+                                    <li>Accepts payment cards</li>
+                                    <li>Processes payment transactions</li>
+                                    <li>Stores cardholder data</li>
+                                    <li>Transmits cardholder data</li>
+                                </ul>
+
+                                <p>This includes merchants, payment processors, banks, service providers, and any third parties with access to cardholder data.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Size Doesn't Matter:</strong> PCI-DSS applies regardless of company size or transaction volume. A small coffee shop accepting cards must comply just like a major retailer.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'About the PCI Council',
+                                    url: 'https://www.pcisecuritystandards.org/about_us/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is Cardholder Data?',
+                            content: `
+                                <p>PCI-DSS protects <strong>cardholder data (CHD)</strong> and <strong>sensitive authentication data (SAD)</strong>.</p>
+
+                                <h4>Cardholder Data (CHD)</h4>
+                                <ul>
+                                    <li><strong>Primary Account Number (PAN):</strong> The 15-16 digit card number</li>
+                                    <li><strong>Cardholder Name:</strong> Name as it appears on the card</li>
+                                    <li><strong>Expiration Date:</strong> Month and year the card expires</li>
+                                    <li><strong>Service Code:</strong> 3-digit code on the magnetic stripe</li>
+                                </ul>
+
+                                <h4>Sensitive Authentication Data (SAD)</h4>
+                                <p>This data is used for authentication but <strong>must NEVER be stored</strong> after authorization:</p>
+                                <ul>
+                                    <li><strong>Full Magnetic Stripe Data:</strong> All track data from the stripe</li>
+                                    <li><strong>CVV/CVC/CAV2:</strong> The 3 or 4 digit security code</li>
+                                    <li><strong>PIN/PIN Block:</strong> Personal Identification Number</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Critical Rule:</strong> Sensitive Authentication Data (CVV, PIN, magnetic stripe data) must NEVER be stored after the transaction is authorized—even if encrypted. This is an absolute prohibition.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which of the following can NEVER be stored after a transaction is authorized, even if encrypted?',
+                            options: [
+                                'Cardholder name',
+                                'Card expiration date',
+                                'CVV/CVC security code',
+                                'Primary Account Number (PAN)'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'The CVV/CVC code is Sensitive Authentication Data and must NEVER be stored after authorization—this is an absolute PCI-DSS prohibition. Cardholder name, expiration date, and PAN can be stored if properly protected (though PAN must be masked or encrypted).'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: The 12 PCI-DSS Requirements
+                // ========================================
+                {
+                    title: 'The 12 PCI-DSS Requirements',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Overview of Requirements',
+                            content: `
+                                <p>PCI-DSS consists of <strong>12 core requirements</strong> organized into 6 goals:</p>
+
+                                <h4>Build and Maintain a Secure Network</h4>
+                                <ol>
+                                    <li>Install and maintain network security controls</li>
+                                    <li>Apply secure configurations to all system components</li>
+                                </ol>
+
+                                <h4>Protect Account Data</h4>
+                                <ol start="3">
+                                    <li>Protect stored account data</li>
+                                    <li>Protect cardholder data during transmission</li>
+                                </ol>
+
+                                <h4>Maintain a Vulnerability Management Program</h4>
+                                <ol start="5">
+                                    <li>Protect systems from malicious software</li>
+                                    <li>Develop and maintain secure systems and software</li>
+                                </ol>
+
+                                <h4>Implement Strong Access Control</h4>
+                                <ol start="7">
+                                    <li>Restrict access to cardholder data by business need</li>
+                                    <li>Identify users and authenticate access</li>
+                                    <li>Restrict physical access to cardholder data</li>
+                                </ol>
+
+                                <h4>Regularly Monitor and Test Networks</h4>
+                                <ol start="10">
+                                    <li>Log and monitor all access to systems and data</li>
+                                    <li>Test security systems and processes regularly</li>
+                                </ol>
+
+                                <h4>Maintain an Information Security Policy</h4>
+                                <ol start="12">
+                                    <li>Support information security with policies and programs</li>
+                                </ol>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS Requirements',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Network Security (Requirements 1-2)',
+                            content: `
+                                <h4>Requirement 1: Network Security Controls</h4>
+                                <p>Install and maintain firewalls and other network security controls to protect the cardholder data environment.</p>
+                                <ul>
+                                    <li>Segment networks to isolate cardholder data</li>
+                                    <li>Restrict inbound and outbound traffic</li>
+                                    <li>Review firewall rules regularly</li>
+                                    <li>Document all network connections and data flows</li>
+                                </ul>
+
+                                <h4>Requirement 2: Secure Configurations</h4>
+                                <p>Don't use vendor-supplied defaults—always customize security settings.</p>
+                                <ul>
+                                    <li>Change default passwords immediately</li>
+                                    <li>Remove or disable unnecessary services</li>
+                                    <li>Harden systems according to industry standards</li>
+                                    <li>Document configuration standards</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Common Mistake:</strong> Leaving default passwords (like "admin/admin") is one of the most common PCI-DSS violations. All default credentials must be changed before production use.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0 Requirements 1-2',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Protecting Data (Requirements 3-4)',
+                            content: `
+                                <h4>Requirement 3: Protect Stored Data</h4>
+                                <p>Minimize storage and protect what you must keep.</p>
+                                <ul>
+                                    <li><strong>Don't store data you don't need</strong> — minimize what you keep</li>
+                                    <li>Mask PAN when displayed (show only last 4 digits)</li>
+                                    <li>Encrypt stored PAN using strong cryptography</li>
+                                    <li>Protect encryption keys with strict access controls</li>
+                                    <li>Document data retention policies</li>
+                                    <li><strong>Never store SAD after authorization</strong></li>
+                                </ul>
+
+                                <h4>Requirement 4: Protect Data in Transit</h4>
+                                <p>Encrypt cardholder data when transmitting over networks.</p>
+                                <ul>
+                                    <li>Use strong encryption (TLS 1.2 or higher)</li>
+                                    <li>Never send PAN via unencrypted email or messaging</li>
+                                    <li>Verify certificates before transmitting</li>
+                                    <li>Document transmission security policies</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Best Practice:</strong> The safest approach is to not store cardholder data at all. Use tokenization or payment processors that handle the data so you never touch it.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0 Requirements 3-4',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'When displaying a credit card number to a customer service rep, how much of the PAN should typically be visible?',
+                            options: [
+                                'The full 16-digit number for verification',
+                                'The first 6 and last 4 digits only',
+                                'Only the last 4 digits',
+                                'No digits should ever be displayed'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'PCI-DSS requires masking of the PAN when displayed. The standard practice is to show only the last 4 digits (e.g., **** **** **** 1234). Displaying more than the first 6 and last 4 digits is prohibited unless there\'s a legitimate business need and proper authorization.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'System Security (Requirements 5-6)',
+                            content: `
+                                <h4>Requirement 5: Malware Protection</h4>
+                                <p>Protect all systems from malicious software.</p>
+                                <ul>
+                                    <li>Deploy anti-malware software on all systems</li>
+                                    <li>Keep anti-malware signatures updated</li>
+                                    <li>Generate audit logs from anti-malware</li>
+                                    <li>Don't allow users to disable protection</li>
+                                </ul>
+
+                                <h4>Requirement 6: Secure Development</h4>
+                                <p>Develop and maintain systems and software securely.</p>
+                                <ul>
+                                    <li>Establish secure development processes</li>
+                                    <li>Identify and address vulnerabilities</li>
+                                    <li>Apply security patches promptly</li>
+                                    <li>Train developers on secure coding</li>
+                                    <li>Review code before release</li>
+                                    <li>Protect public-facing web applications</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⏰</span>
+                                    <div>
+                                        <strong>Patching Timeline:</strong> Critical security patches must be applied within one month of release. High-risk vulnerabilities require even faster response.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0 Requirements 5-6',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Access Control (Requirements 7-9)',
+                            content: `
+                                <h4>Requirement 7: Restrict Access by Business Need</h4>
+                                <p>Only people who need cardholder data should have access.</p>
+                                <ul>
+                                    <li>Define access needs based on job function</li>
+                                    <li>Default to "deny all" unless specifically authorized</li>
+                                    <li>Document and approve all access</li>
+                                    <li>Review access rights regularly</li>
+                                </ul>
+
+                                <h4>Requirement 8: Identify and Authenticate Users</h4>
+                                <ul>
+                                    <li>Unique user IDs for everyone—no shared accounts</li>
+                                    <li>Strong authentication (passwords, MFA)</li>
+                                    <li>Multi-factor authentication for remote access and admin</li>
+                                    <li>Lock accounts after failed login attempts</li>
+                                    <li>Proper session management</li>
+                                </ul>
+
+                                <h4>Requirement 9: Restrict Physical Access</h4>
+                                <ul>
+                                    <li>Control physical access to systems with cardholder data</li>
+                                    <li>Secure media containing cardholder data</li>
+                                    <li>Destroy media when no longer needed</li>
+                                    <li>Control visitor access</li>
+                                    <li>Protect point-of-sale devices from tampering</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>No Shared Accounts:</strong> Every person must have their own unique login. Shared accounts like "cashier1" or generic logins violate PCI-DSS and make it impossible to trace who accessed data.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0 Requirements 7-9',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: Monitoring & Testing
+                // ========================================
+                {
+                    title: 'Monitoring & Testing',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Logging & Monitoring (Requirement 10)',
+                            content: `
+                                <h4>Requirement 10: Log and Monitor All Access</h4>
+                                <p>Track and monitor all access to network resources and cardholder data.</p>
+
+                                <h4>What Must Be Logged?</h4>
+                                <ul>
+                                    <li>All individual user access to cardholder data</li>
+                                    <li>All actions by administrators</li>
+                                    <li>Access to audit logs</li>
+                                    <li>Invalid login attempts</li>
+                                    <li>Changes to authentication mechanisms</li>
+                                    <li>System-level object creation/deletion</li>
+                                </ul>
+
+                                <h4>Log Requirements</h4>
+                                <ul>
+                                    <li>Include user ID, date/time, event type, success/failure</li>
+                                    <li>Synchronize time across all systems</li>
+                                    <li>Secure logs from tampering</li>
+                                    <li>Review logs daily</li>
+                                    <li>Retain logs for at least one year</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🔍</span>
+                                    <div>
+                                        <strong>Why Logging Matters:</strong> If a breach occurs, logs are essential for understanding what happened, when, and who was involved. Without proper logs, you can't investigate incidents or prove compliance.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0 Requirement 10',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Security Testing (Requirement 11)',
+                            content: `
+                                <h4>Requirement 11: Test Security Regularly</h4>
+                                <p>Security vulnerabilities are constantly discovered—regular testing is essential.</p>
+
+                                <h4>Required Testing</h4>
+
+                                <p><strong>Vulnerability Scanning</strong></p>
+                                <ul>
+                                    <li>Internal scans: At least quarterly</li>
+                                    <li>External scans: At least quarterly (by approved vendor)</li>
+                                    <li>After any significant change</li>
+                                </ul>
+
+                                <p><strong>Penetration Testing</strong></p>
+                                <ul>
+                                    <li>At least annually</li>
+                                    <li>After significant changes</li>
+                                    <li>Include network and application layer testing</li>
+                                </ul>
+
+                                <p><strong>Intrusion Detection</strong></p>
+                                <ul>
+                                    <li>Monitor network traffic for intrusions</li>
+                                    <li>Alert personnel to suspected compromises</li>
+                                    <li>Monitor critical files for changes</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Scan Failures:</strong> If vulnerability scans identify issues, you must remediate and rescan. You cannot be compliant with failing scan results.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS v4.0 Requirement 11',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'How often must external vulnerability scans be performed according to PCI-DSS?',
+                            options: [
+                                'Monthly',
+                                'Quarterly',
+                                'Annually',
+                                'Only when changes are made'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'PCI-DSS requires external vulnerability scans at least quarterly (every 3 months), performed by an Approved Scanning Vendor (ASV). Additional scans are required after significant changes to the environment.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Your Responsibilities
+                // ========================================
+                {
+                    title: 'Your Responsibilities',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Handling Cardholder Data',
+                            content: `
+                                <h4>If You Handle Card Data Directly</h4>
+                                <ul>
+                                    <li>Never write down full card numbers</li>
+                                    <li>Never store CVV codes—ever</li>
+                                    <li>Don't send card data via email, chat, or text</li>
+                                    <li>Don't take photos of cards</li>
+                                    <li>Process transactions on approved systems only</li>
+                                    <li>Report lost or stolen devices immediately</li>
+                                </ul>
+
+                                <h4>Physical Card Handling</h4>
+                                <ul>
+                                    <li>Keep cards in view of the customer</li>
+                                    <li>Return cards immediately after use</li>
+                                    <li>Never leave card data unattended</li>
+                                    <li>Shred any paper with card data</li>
+                                </ul>
+
+                                <h4>Phone/MOTO Transactions</h4>
+                                <ul>
+                                    <li>Never ask customers to email card numbers</li>
+                                    <li>Don't record calls containing card data (or delete audio)</li>
+                                    <li>Use approved entry methods only</li>
+                                    <li>Verify you're speaking with the cardholder</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never:</strong>
+                                        <ul>
+                                            <li>Store card data on personal devices</li>
+                                            <li>Take card data home</li>
+                                            <li>Use personal email for card data</li>
+                                            <li>Store CVV/CVC under any circumstances</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI DSS Employee Training',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Customer Phone Request',
+                            context: 'A customer calls and says: "I need to update my payment method but your website isn\'t working. Can I just email you my new card number?" They seem frustrated and in a hurry.',
+                            choices: [
+                                {
+                                    text: 'Accept the card number via email to help the customer',
+                                    correct: false,
+                                    feedback: 'Never accept card data via email—it\'s unencrypted and creates a permanent record. This violates PCI-DSS requirement 4 (protecting data in transit) and creates significant risk.'
+                                },
+                                {
+                                    text: 'Ask them to read the card number over the phone instead',
+                                    correct: false,
+                                    feedback: 'While slightly better than email, you need to ensure the call isn\'t being recorded and that you\'re entering data directly into an approved system—not writing it down. There may be a better option.'
+                                },
+                                {
+                                    text: 'Explain you can\'t take card data via email, troubleshoot the website issue, or offer a secure alternative method',
+                                    correct: true,
+                                    feedback: 'Correct! Explain the security concern, try to resolve the website issue, and offer compliant alternatives like a secure payment link, callback to a recorded-transaction line, or troubleshooting their browser.'
+                                },
+                                {
+                                    text: 'Have them text a photo of the card instead',
+                                    correct: false,
+                                    feedback: 'This is even worse than email! Photos of cards capture all sensitive data including CVV. Text messages are unencrypted. This would be a serious PCI-DSS violation.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Protecting Systems & Access',
+                            content: `
+                                <h4>Password & Authentication</h4>
+                                <ul>
+                                    <li>Use strong, unique passwords</li>
+                                    <li>Never share your login credentials</li>
+                                    <li>Enable MFA where available</li>
+                                    <li>Lock your workstation when away</li>
+                                    <li>Report suspicious login attempts</li>
+                                </ul>
+
+                                <h4>Workstation Security</h4>
+                                <ul>
+                                    <li>Only use approved software</li>
+                                    <li>Don't disable antivirus or security tools</li>
+                                    <li>Don't connect personal devices without approval</li>
+                                    <li>Lock screens when leaving your desk</li>
+                                    <li>Report any unusual system behavior</li>
+                                </ul>
+
+                                <h4>Physical Security</h4>
+                                <ul>
+                                    <li>Secure payment terminals and devices</li>
+                                    <li>Don't leave sensitive areas unlocked</li>
+                                    <li>Challenge unknown visitors in secure areas</li>
+                                    <li>Report damaged or tampered equipment</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🔐</span>
+                                    <div>
+                                        <strong>Terminal Tampering:</strong> Criminals may try to install "skimmers" on payment terminals to capture card data. Regularly inspect terminals for any unusual attachments, loose parts, or damage.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Skimming Prevention Guide',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'You notice that a payment terminal looks slightly different—there seems to be an extra piece attached to the card slot. What should you do?',
+                            options: [
+                                'Continue using it—it\'s probably a manufacturer update',
+                                'Remove the suspicious piece yourself and keep using the terminal',
+                                'Stop using the terminal and report it to management/security immediately',
+                                'Try a test transaction to see if it works normally'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'Any suspicious modifications to payment terminals could be card skimmers installed by criminals. Stop using the terminal immediately, don\'t touch or remove anything (preserve evidence), and report it to management and security. Law enforcement may need to investigate.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: Incidents & Compliance
+                // ========================================
+                {
+                    title: 'Incidents & Compliance',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Recognizing Security Incidents',
+                            content: `
+                                <h4>Signs of a Potential Breach</h4>
+                                <ul>
+                                    <li>Unusual transactions or patterns</li>
+                                    <li>Unauthorized users or access</li>
+                                    <li>Tampered equipment or terminals</li>
+                                    <li>Missing or altered data</li>
+                                    <li>Alerts from security systems</li>
+                                    <li>Customer complaints about fraudulent charges</li>
+                                </ul>
+
+                                <h4>Common Attack Indicators</h4>
+                                <ul>
+                                    <li>Phishing emails requesting card data</li>
+                                    <li>Suspicious calls asking for system access</li>
+                                    <li>Unusual network activity</li>
+                                    <li>Unknown devices connected to systems</li>
+                                    <li>Disabled security software</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>When in Doubt, Report:</strong> It's better to report something that turns out to be nothing than to ignore a real incident. Early detection limits damage.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'content',
+                            title: 'Reporting Incidents',
+                            content: `
+                                <h4>What to Report</h4>
+                                <ul>
+                                    <li>Any suspected breach or unauthorized access</li>
+                                    <li>Lost or stolen devices containing card data</li>
+                                    <li>Suspicious emails or phone calls</li>
+                                    <li>Tampered terminals or equipment</li>
+                                    <li>Security policy violations</li>
+                                    <li>Customer reports of fraud</li>
+                                </ul>
+
+                                <h4>How to Report</h4>
+                                <ul>
+                                    <li>Report immediately—don't delay</li>
+                                    <li>Contact your supervisor or security team</li>
+                                    <li>Document what you observed (time, details)</li>
+                                    <li>Don't try to investigate yourself</li>
+                                    <li>Preserve any evidence</li>
+                                </ul>
+
+                                <h4>Breach Consequences</h4>
+                                <ul>
+                                    <li><strong>Fines:</strong> Card brands can fine $5,000-$100,000+ per month</li>
+                                    <li><strong>Liability:</strong> Cost of fraudulent transactions</li>
+                                    <li><strong>Investigation costs:</strong> Forensic analysis, notifications</li>
+                                    <li><strong>Reputation:</strong> Loss of customer trust</li>
+                                    <li><strong>Processing rights:</strong> May lose ability to accept cards</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">💸</span>
+                                    <div>
+                                        <strong>Real Costs:</strong> The average cost of a data breach involving payment cards is millions of dollars when you include fines, investigation, remediation, legal fees, and lost business.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'PCI Incident Response',
+                                    url: 'https://www.pcisecuritystandards.org/document_library/',
+                                    org: 'PCI Security Standards Council'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Phishing Attempt',
+                            context: 'You receive an email that appears to be from your payment processor. It says there\'s a problem with your account and asks you to click a link and enter your login credentials to verify your identity and avoid service interruption.',
+                            choices: [
+                                {
+                                    text: 'Click the link and enter your credentials—it looks official',
+                                    correct: false,
+                                    feedback: 'This is a classic phishing attack. Never click links in unexpected emails or enter credentials. Attackers can create convincing fake emails and websites to steal your login information.'
+                                },
+                                {
+                                    text: 'Reply to the email asking if it\'s legitimate',
+                                    correct: false,
+                                    feedback: 'Replying to a phishing email confirms your email is active and may go to the attacker. Never reply to suspicious emails—verify through known, legitimate channels.'
+                                },
+                                {
+                                    text: 'Report the email as phishing and verify by contacting your payment processor directly through known contact info',
+                                    correct: true,
+                                    feedback: 'Correct! Report the suspicious email through your phishing reporting mechanism. If you need to verify something, contact your payment processor using contact information from their official website or your records—never from the email itself.'
+                                },
+                                {
+                                    text: 'Forward it to colleagues to see if they received it too',
+                                    correct: false,
+                                    feedback: 'Forwarding spreads the phishing attack to more potential victims. Report it to your security team instead—they can warn others through proper channels and block the attack.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. Protect Cardholder Data</strong><br>
+                                PAN must be encrypted or masked. CVV can NEVER be stored after authorization.</p>
+
+                                <p><strong>2. Follow the 12 Requirements</strong><br>
+                                Network security, data protection, access control, monitoring, and policies all work together.</p>
+
+                                <p><strong>3. Access on Need-to-Know Basis</strong><br>
+                                Only access cardholder data if your job requires it. Use unique credentials.</p>
+
+                                <p><strong>4. Never Store Prohibited Data</strong><br>
+                                CVV, PIN, and full magnetic stripe data must never be stored—period.</p>
+
+                                <p><strong>5. Report Incidents Immediately</strong><br>
+                                Suspicious activity, tampered equipment, or potential breaches must be reported right away.</p>
+
+                                <p><strong>6. Secure Your Workstation</strong><br>
+                                Lock screens, use strong passwords, and only use approved systems and software.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">💳</span>
+                                    <div>
+                                        <strong>Remember:</strong> Every time you handle payment card data, you're protecting real people from fraud and identity theft. Your vigilance matters.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing PCI-DSS Awareness Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>

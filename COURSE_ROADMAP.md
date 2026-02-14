@@ -21,7 +21,7 @@ Corporate SaaS companies in Canada, US, and EU
 | 7 | **AI Ethics & Governance** | Emerging requirement, almost no competition | US/CA/EU | ✅ COMPLETE |
 | 8 | **HIPAA Compliance** | Healthcare SaaS is huge market | US | ✅ COMPLETE |
 | 9 | **Anti-Money Laundering (AML)** | Required for fintech/payments | US/CA/EU | ✅ COMPLETE |
-| 10 | **PCI-DSS Awareness** | Any company handling payments | US/CA/EU |
+| 10 | **PCI-DSS Awareness** | Any company handling payments | US/CA/EU | ✅ COMPLETE |
 
 ### Tier 2 - Enterprise Compliance ($$$)
 | # | Course | Why It Prints Money | Regions |
