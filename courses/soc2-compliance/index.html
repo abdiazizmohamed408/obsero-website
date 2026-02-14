@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC 2 Compliance Training | Obsero</title>
+    <meta name="description" content="Learn SOC 2 compliance essentials for SaaS organizations. Trust Services Criteria, security controls, and your role in maintaining compliance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <!-- Header -->
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">SOC 2 Compliance Training</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list">
+                <!-- Populated by JavaScript -->
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="course-main">
+            <div class="module-header">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="content-area">
+                <!-- Populated by JavaScript -->
+            </div>
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        // SOC 2 Compliance Training Course Content
+        course = new ObseroCourse({
+            courseId: 'soc2-compliance',
+            courseTitle: 'SOC 2 Compliance Training',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: Introduction to SOC 2
+                // ========================================
+                {
+                    title: 'Introduction to SOC 2',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to SOC 2 Compliance Training',
+                            content: `
+                                <p>This course will teach you the fundamentals of SOC 2 compliance and your critical role in maintaining it.</p>
+                                
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 45 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>What SOC 2 is and why it matters for our business</li>
+                                    <li>The five Trust Services Criteria</li>
+                                    <li>Your specific responsibilities for compliance</li>
+                                    <li>Common risks and how to avoid them</li>
+                                    <li>How to handle security incidents</li>
+                                </ul>
+
+                                <h4>Why This Matters</h4>
+                                <p>SOC 2 compliance isn't just a checkbox—it's how we prove to customers that we can be trusted with their data. Without it, enterprise customers won't do business with us.</p>
+                            `,
+                            sources: [
+                                {
+                                    title: 'AICPA SOC 2 Overview',
+                                    url: 'https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is SOC 2?',
+                            content: `
+                                <p><strong>SOC 2</strong> (System and Organization Controls 2) is a compliance framework developed by the American Institute of Certified Public Accountants (AICPA). It defines criteria for managing customer data based on five "Trust Services Criteria."</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Key Point:</strong> SOC 2 is specifically designed for technology and cloud computing companies that store customer data.
+                                    </div>
+                                </div>
+
+                                <h4>SOC 2 Type I vs. Type II</h4>
+                                <ul>
+                                    <li><strong>Type I:</strong> Evaluates the design of controls at a specific point in time</li>
+                                    <li><strong>Type II:</strong> Evaluates the operating effectiveness of controls over a period (usually 6-12 months)</li>
+                                </ul>
+
+                                <p>Most enterprise customers require <strong>SOC 2 Type II</strong> certification because it demonstrates sustained compliance, not just a snapshot.</p>
+
+                                <h4>Who Needs SOC 2?</h4>
+                                <p>Any organization that stores, processes, or transmits customer data should consider SOC 2. This includes:</p>
+                                <ul>
+                                    <li>SaaS companies</li>
+                                    <li>Cloud service providers</li>
+                                    <li>Data centers</li>
+                                    <li>IT managed services</li>
+                                    <li>Any company handling B2B customer data</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SOC 2® — SOC for Service Organizations',
+                                    url: 'https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2',
+                                    org: 'AICPA'
+                                },
+                                {
+                                    title: 'Trust Services Criteria',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'What is the main difference between SOC 2 Type I and Type II?',
+                            options: [
+                                'Type I is for large companies, Type II is for small companies',
+                                'Type I evaluates controls at a point in time, Type II evaluates controls over a period',
+                                'Type I covers security only, Type II covers all five criteria',
+                                'Type I is voluntary, Type II is mandatory'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'SOC 2 Type I evaluates control design at a specific point in time, while Type II evaluates how effectively controls operate over a period of 6-12 months. Type II is more rigorous and what most enterprise customers require.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Why SOC 2 Matters for Our Business',
+                            content: `
+                                <h4>The Business Case for SOC 2</h4>
+                                <p>SOC 2 compliance directly impacts our ability to win and retain customers:</p>
+
+                                <ul>
+                                    <li><strong>Enterprise Sales:</strong> 95% of enterprise buyers require SOC 2 compliance from their vendors</li>
+                                    <li><strong>Competitive Advantage:</strong> SOC 2 certification differentiates us from non-compliant competitors</li>
+                                    <li><strong>Risk Reduction:</strong> Proper controls reduce the likelihood and impact of data breaches</li>
+                                    <li><strong>Customer Trust:</strong> Demonstrates our commitment to protecting customer data</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Real Impact:</strong> A single compliance failure can delay deals, trigger customer audits, or even result in contract termination.
+                                    </div>
+                                </div>
+
+                                <h4>The Cost of Non-Compliance</h4>
+                                <ul>
+                                    <li>Lost sales opportunities with security-conscious customers</li>
+                                    <li>Increased audit and remediation costs</li>
+                                    <li>Reputational damage following security incidents</li>
+                                    <li>Potential legal liability for data breaches</li>
+                                </ul>
+
+                                <p>Your daily actions directly impact whether we maintain our SOC 2 certification.</p>
+                            `,
+                            sources: [
+                                {
+                                    title: 'The Business Value of SOC 2',
+                                    url: 'https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: The Five Trust Services Criteria
+                // ========================================
+                {
+                    title: 'Trust Services Criteria',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'The Five Trust Services Criteria',
+                            content: `
+                                <p>SOC 2 is built around five <strong>Trust Services Criteria</strong> (TSC). Organizations choose which criteria to include in their audit based on their business and customer requirements.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🔒</span>
+                                    <div>
+                                        <strong>Note:</strong> Security is always required. The other four criteria are optional but recommended based on your services.
+                                    </div>
+                                </div>
+
+                                <h4>The Five Criteria</h4>
+                                <ol>
+                                    <li><strong>Security</strong> (Required) — Protection against unauthorized access</li>
+                                    <li><strong>Availability</strong> — System uptime and accessibility</li>
+                                    <li><strong>Processing Integrity</strong> — Accurate and timely data processing</li>
+                                    <li><strong>Confidentiality</strong> — Protection of confidential information</li>
+                                    <li><strong>Privacy</strong> — Personal information handling</li>
+                                </ol>
+
+                                <p>Let's explore each criterion in detail.</p>
+                            `,
+                            sources: [
+                                {
+                                    title: '2017 Trust Services Criteria for Security, Availability, Processing Integrity, Confidentiality, and Privacy',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Security (CC — Common Criteria)',
+                            content: `
+                                <p><strong>Security</strong> is the foundation of SOC 2 and is required for all audits. It ensures systems are protected against unauthorized access (both physical and logical).</p>
+
+                                <h4>Key Security Controls</h4>
+                                <ul>
+                                    <li><strong>Access Controls:</strong> Who can access what systems and data</li>
+                                    <li><strong>Encryption:</strong> Data protection in transit and at rest</li>
+                                    <li><strong>Firewalls & Network Security:</strong> Perimeter defense</li>
+                                    <li><strong>Intrusion Detection:</strong> Monitoring for threats</li>
+                                    <li><strong>Multi-Factor Authentication (MFA):</strong> Verify user identity</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>Your Role:</strong>
+                                        <ul>
+                                            <li>Use strong, unique passwords</li>
+                                            <li>Enable MFA on all accounts</li>
+                                            <li>Lock your computer when away</li>
+                                            <li>Report suspicious activity immediately</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Common Criteria (CC) Series',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Availability',
+                            content: `
+                                <p><strong>Availability</strong> ensures that systems are operational and accessible as agreed upon in contracts or service level agreements (SLAs).</p>
+
+                                <h4>Key Availability Controls</h4>
+                                <ul>
+                                    <li><strong>Disaster Recovery Plans:</strong> How we restore service after outages</li>
+                                    <li><strong>Backup Systems:</strong> Regular data backups and testing</li>
+                                    <li><strong>Capacity Planning:</strong> Ensuring infrastructure can handle load</li>
+                                    <li><strong>Monitoring & Alerting:</strong> Detecting issues before customers do</li>
+                                    <li><strong>Incident Response:</strong> Minimizing downtime when issues occur</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">📊</span>
+                                    <div>
+                                        <strong>Why It Matters:</strong> Our SLAs often promise 99.9% uptime (about 8.7 hours of downtime per year maximum). Every unplanned outage affects our compliance status.
+                                    </div>
+                                </div>
+
+                                <h4>Your Role in Availability</h4>
+                                <ul>
+                                    <li>Follow change management procedures before making system changes</li>
+                                    <li>Report performance issues or potential capacity problems</li>
+                                    <li>Know the escalation path for critical incidents</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Availability Criteria (A Series)',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Which Trust Services Criterion is ALWAYS required in a SOC 2 audit?',
+                            options: [
+                                'Availability',
+                                'Privacy',
+                                'Security',
+                                'Confidentiality'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'Security (Common Criteria) is the only mandatory criterion in SOC 2 audits. The other four criteria—Availability, Processing Integrity, Confidentiality, and Privacy—are optional and selected based on business needs.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Processing Integrity',
+                            content: `
+                                <p><strong>Processing Integrity</strong> ensures that system processing is complete, valid, accurate, timely, and authorized.</p>
+
+                                <h4>Key Processing Integrity Controls</h4>
+                                <ul>
+                                    <li><strong>Input Validation:</strong> Ensuring data entered is correct and complete</li>
+                                    <li><strong>Processing Accuracy:</strong> Calculations and transformations are correct</li>
+                                    <li><strong>Output Verification:</strong> Results match expected outcomes</li>
+                                    <li><strong>Error Handling:</strong> Proper handling of processing exceptions</li>
+                                    <li><strong>Audit Trails:</strong> Tracking changes and processing history</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Example:</strong> If our system processes financial transactions, processing integrity ensures that $100 sent equals $100 received—no data corruption, no errors.
+                                    </div>
+                                </div>
+
+                                <h4>Your Role</h4>
+                                <ul>
+                                    <li>Verify data accuracy before processing</li>
+                                    <li>Report any unexpected system behavior</li>
+                                    <li>Follow data entry procedures exactly</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Processing Integrity Criteria (PI Series)',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Confidentiality',
+                            content: `
+                                <p><strong>Confidentiality</strong> protects information designated as confidential—trade secrets, intellectual property, business strategies, and other sensitive data that isn't publicly available.</p>
+
+                                <h4>What's Considered Confidential?</h4>
+                                <ul>
+                                    <li>Customer data and contracts</li>
+                                    <li>Source code and technical documentation</li>
+                                    <li>Financial information</li>
+                                    <li>Strategic plans and roadmaps</li>
+                                    <li>Employee information</li>
+                                </ul>
+
+                                <h4>Key Confidentiality Controls</h4>
+                                <ul>
+                                    <li><strong>Data Classification:</strong> Labeling data by sensitivity level</li>
+                                    <li><strong>Access Restrictions:</strong> Need-to-know basis access</li>
+                                    <li><strong>Encryption:</strong> Protecting data in transit and at rest</li>
+                                    <li><strong>Secure Disposal:</strong> Properly destroying data when no longer needed</li>
+                                    <li><strong>NDAs:</strong> Legal agreements protecting shared information</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never:</strong>
+                                        <ul>
+                                            <li>Share confidential data via unsecured channels</li>
+                                            <li>Leave sensitive documents visible on your screen</li>
+                                            <li>Discuss confidential matters in public spaces</li>
+                                            <li>Store confidential data on personal devices</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Confidentiality Criteria (C Series)',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Privacy',
+                            content: `
+                                <p><strong>Privacy</strong> addresses the collection, use, retention, disclosure, and disposal of personal information in conformity with privacy notices and regulations (GDPR, CCPA, PIPEDA, etc.).</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Privacy vs. Confidentiality:</strong> Privacy specifically protects <em>personal information</em> about individuals. Confidentiality protects any sensitive business information.
+                                    </div>
+                                </div>
+
+                                <h4>Personal Information Includes:</h4>
+                                <ul>
+                                    <li>Names and contact information</li>
+                                    <li>Government IDs (SSN, passport numbers)</li>
+                                    <li>Financial account information</li>
+                                    <li>Health information</li>
+                                    <li>Location data</li>
+                                    <li>Online identifiers (IP addresses, cookies)</li>
+                                </ul>
+
+                                <h4>Key Privacy Controls</h4>
+                                <ul>
+                                    <li><strong>Consent Management:</strong> Obtaining proper permission to collect data</li>
+                                    <li><strong>Purpose Limitation:</strong> Using data only for stated purposes</li>
+                                    <li><strong>Data Minimization:</strong> Collecting only what's necessary</li>
+                                    <li><strong>Data Subject Rights:</strong> Allowing access, correction, and deletion</li>
+                                    <li><strong>Retention Limits:</strong> Deleting data when no longer needed</li>
+                                </ul>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Privacy Criteria (P Series)',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                },
+                                {
+                                    title: 'General Data Protection Regulation (GDPR)',
+                                    url: 'https://gdpr.eu/',
+                                    org: 'European Union'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Confidential Data Request',
+                            context: 'A person claiming to be from one of your customer\'s IT department calls you. They say they need a copy of their company\'s data export immediately for an urgent audit, and they want you to email it to their personal Gmail address.',
+                            choices: [
+                                {
+                                    text: 'Send the export immediately—they said it\'s urgent',
+                                    correct: false,
+                                    feedback: 'This could be a social engineering attack. Sending confidential data to an unverified personal email violates confidentiality controls and could result in a data breach.'
+                                },
+                                {
+                                    text: 'Verify their identity through official channels before taking any action',
+                                    correct: true,
+                                    feedback: 'Correct! Always verify requests for confidential data through official channels. Look up the customer\'s contact information independently and confirm the request with a known contact.'
+                                },
+                                {
+                                    text: 'Ask them to send you an email from their company address first',
+                                    correct: false,
+                                    feedback: 'This is better than immediately sending data, but email addresses can be spoofed. The safest approach is to independently verify through known channels.'
+                                },
+                                {
+                                    text: 'Tell them you can\'t help and hang up',
+                                    correct: false,
+                                    feedback: 'While protective, this doesn\'t resolve the issue professionally. The right approach is to verify the request through proper channels—this could be a legitimate request that needs proper handling.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: Your Security Responsibilities
+                // ========================================
+                {
+                    title: 'Your Security Responsibilities',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Everyone Plays a Role',
+                            content: `
+                                <p>SOC 2 compliance isn't just the security team's job. <strong>Every employee</strong> is responsible for maintaining the controls that keep us compliant.</p>
+
+                                <h4>The Human Element</h4>
+                                <p>According to research, <strong>82% of data breaches involve a human element</strong>—phishing, stolen credentials, or human error. Technical controls are only as strong as the people using them.</p>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Remember:</strong> A single employee clicking a phishing link or sharing credentials can compromise our entire SOC 2 certification.
+                                    </div>
+                                </div>
+
+                                <h4>Your Core Responsibilities</h4>
+                                <ol>
+                                    <li>Protect your credentials</li>
+                                    <li>Follow access policies</li>
+                                    <li>Handle data appropriately</li>
+                                    <li>Report security concerns</li>
+                                    <li>Complete required training</li>
+                                </ol>
+
+                                <p>Let's dive into each of these areas.</p>
+                            `,
+                            sources: [
+                                {
+                                    title: '2023 Data Breach Investigations Report',
+                                    url: 'https://www.verizon.com/business/resources/reports/dbir/',
+                                    org: 'Verizon'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Password & Authentication Security',
+                            content: `
+                                <h4>Password Requirements</h4>
+                                <ul>
+                                    <li><strong>Minimum 12 characters</strong> (longer is better)</li>
+                                    <li>Mix of uppercase, lowercase, numbers, and symbols</li>
+                                    <li><strong>Unique passwords</strong> for every account</li>
+                                    <li>Never share passwords with anyone—including IT</li>
+                                    <li>Use a password manager (approved by IT)</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>Good Password:</strong> <code>Tr0ub4dor&3horse$Battery!</code><br>
+                                        <strong>Bad Password:</strong> <code>Password123</code>, <code>CompanyName2024</code>
+                                    </div>
+                                </div>
+
+                                <h4>Multi-Factor Authentication (MFA)</h4>
+                                <p>MFA is <strong>required</strong> for all company systems. This means you need two things to log in:</p>
+                                <ol>
+                                    <li>Something you know (password)</li>
+                                    <li>Something you have (phone, hardware key)</li>
+                                </ol>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never:</strong>
+                                        <ul>
+                                            <li>Share MFA codes with others</li>
+                                            <li>Approve MFA requests you didn't initiate</li>
+                                            <li>Disable MFA without IT approval</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Password Guidelines',
+                                    url: 'https://pages.nist.gov/800-63-3/sp800-63b.html',
+                                    org: 'NIST SP 800-63B'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'You receive an unexpected MFA push notification while you\'re not trying to log in. What should you do?',
+                            options: [
+                                'Approve it—it\'s probably a system test',
+                                'Deny it and report it to security immediately',
+                                'Ignore it and continue working',
+                                'Approve it, then change your password later'
+                            ],
+                            correctAnswer: 1,
+                            explanation: 'An unexpected MFA request is a red flag—someone may have your password and is trying to access your account. Deny the request immediately and report it to security. This is called an "MFA fatigue attack."'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Access Control & Least Privilege',
+                            content: `
+                                <h4>The Principle of Least Privilege</h4>
+                                <p>You should only have access to the data and systems you <strong>need</strong> to do your job—nothing more. This limits damage if your account is compromised.</p>
+
+                                <h4>Access Control Rules</h4>
+                                <ul>
+                                    <li><strong>Don't share accounts:</strong> Each person has their own login</li>
+                                    <li><strong>Don't request unnecessary access:</strong> Only ask for what you need</li>
+                                    <li><strong>Report role changes:</strong> If you change teams, your access should change too</li>
+                                    <li><strong>Never use shared credentials:</strong> Even if it's "easier"</li>
+                                </ul>
+
+                                <h4>When You Leave Your Desk</h4>
+                                <ul>
+                                    <li>Lock your computer (Windows: <code>Win + L</code>, Mac: <code>Ctrl + Cmd + Q</code>)</li>
+                                    <li>Don't leave sensitive documents visible</li>
+                                    <li>Log out of sensitive systems if leaving for extended periods</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Remember:</strong> Screen auto-lock is set to 5 minutes maximum, but locking manually when you leave is better.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Principle of Least Privilege',
+                                    url: 'https://csrc.nist.gov/glossary/term/least_privilege',
+                                    org: 'NIST'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Data Handling Best Practices',
+                            content: `
+                                <h4>Data Classification</h4>
+                                <p>All company data falls into one of these categories:</p>
+                                <ul>
+                                    <li><strong>Public:</strong> Marketing materials, public website content</li>
+                                    <li><strong>Internal:</strong> Company policies, internal docs (default classification)</li>
+                                    <li><strong>Confidential:</strong> Customer data, contracts, financials</li>
+                                    <li><strong>Restricted:</strong> PII, credentials, security configurations</li>
+                                </ul>
+
+                                <h4>Handling Rules by Classification</h4>
+                                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                                    <tr style="background: var(--gray-100);">
+                                        <th style="padding: 12px; text-align: left;">Classification</th>
+                                        <th style="padding: 12px; text-align: left;">Sharing</th>
+                                        <th style="padding: 12px; text-align: left;">Storage</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Public</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Anyone</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Anywhere approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Internal</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Employees only</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Company systems only</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Confidential</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Need-to-know</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Encrypted systems only</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Restricted</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Named individuals</td>
+                                        <td style="padding: 12px; border-top: 1px solid var(--gray-200);">Approved secure systems</td>
+                                    </tr>
+                                </table>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never store company data on:</strong>
+                                        <ul>
+                                            <li>Personal devices (unless approved BYOD)</li>
+                                            <li>Personal cloud accounts (personal Dropbox, Google Drive, etc.)</li>
+                                            <li>USB drives (without encryption and approval)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Urgent Data Request',
+                            context: 'You\'re working from a coffee shop and a colleague Slacks you: "Hey, can you quickly export the Q3 customer list and upload it to your personal Google Drive? I need to work on it this weekend and my VPN isn\'t working."',
+                            choices: [
+                                {
+                                    text: 'Upload it to your personal Google Drive—they need it urgently',
+                                    correct: false,
+                                    feedback: 'Customer data is confidential and should never be stored on personal cloud accounts. This would be a SOC 2 violation and potential data breach.'
+                                },
+                                {
+                                    text: 'Email it to them directly instead',
+                                    correct: false,
+                                    feedback: 'Email is not secure enough for confidential customer data, especially to work around proper access controls. Their VPN issue needs to be resolved properly.'
+                                },
+                                {
+                                    text: 'Tell them to contact IT to fix their VPN access, and use an approved company system',
+                                    correct: true,
+                                    feedback: 'Correct! The right answer is to use approved channels. IT can fix VPN access or set up an approved alternative. Never work around security controls for convenience.'
+                                },
+                                {
+                                    text: 'Upload it but delete it after they download it',
+                                    correct: false,
+                                    feedback: 'Even temporarily storing customer data on unapproved systems is a violation. Once data leaves approved systems, you lose control and auditability.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Recognizing and Reporting Threats
+                // ========================================
+                {
+                    title: 'Recognizing & Reporting Threats',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Common Security Threats',
+                            content: `
+                                <p>Being able to recognize threats is your first line of defense. Here are the most common attacks you'll encounter:</p>
+
+                                <h4>1. Phishing</h4>
+                                <p>Fraudulent emails or messages designed to steal credentials or install malware. Signs include:</p>
+                                <ul>
+                                    <li>Urgent or threatening language ("Your account will be closed!")</li>
+                                    <li>Requests for passwords or sensitive information</li>
+                                    <li>Suspicious sender addresses (look closely at the domain)</li>
+                                    <li>Links that don't match the displayed text</li>
+                                    <li>Unexpected attachments</li>
+                                </ul>
+
+                                <h4>2. Social Engineering</h4>
+                                <p>Manipulating people into giving up information or access:</p>
+                                <ul>
+                                    <li>Pretending to be IT support, executives, or vendors</li>
+                                    <li>Creating artificial urgency or fear</li>
+                                    <li>Asking you to bypass normal procedures</li>
+                                </ul>
+
+                                <h4>3. Malware</h4>
+                                <p>Malicious software that can steal data or damage systems:</p>
+                                <ul>
+                                    <li>Ransomware (encrypts files for ransom)</li>
+                                    <li>Spyware (monitors your activity)</li>
+                                    <li>Keyloggers (records what you type)</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>When in doubt:</strong> Don't click. Don't download. Don't respond. Report it.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Phishing Guidance',
+                                    url: 'https://www.cisa.gov/topics/cyber-threats-and-advisories/phishing',
+                                    org: 'CISA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'You receive an email from "IT-Support@company.co" (note: your company uses "company.com") asking you to verify your password due to a security update. What should you do?',
+                            options: [
+                                'Click the link and verify your password to avoid account lockout',
+                                'Reply to ask if it\'s legitimate',
+                                'Report it as phishing and don\'t click any links',
+                                'Forward it to your colleagues to warn them'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'The domain mismatch (company.co vs company.com) is a classic phishing indicator. IT will never ask for your password via email. Report it through your phishing reporting mechanism—don\'t reply, click, or forward (forwarding can spread the attack).'
+                        },
+                        {
+                            type: 'content',
+                            title: 'How to Report Security Concerns',
+                            content: `
+                                <h4>What to Report</h4>
+                                <ul>
+                                    <li>Suspicious emails or messages (potential phishing)</li>
+                                    <li>Unexpected MFA prompts</li>
+                                    <li>Strange system behavior or unknown software</li>
+                                    <li>Lost or stolen devices</li>
+                                    <li>Unauthorized people in secure areas</li>
+                                    <li>Accidental data exposure</li>
+                                    <li>Any potential policy violations</li>
+                                </ul>
+
+                                <h4>How to Report</h4>
+                                <div class="callout success">
+                                    <span class="callout-icon">📧</span>
+                                    <div>
+                                        <strong>Primary Methods:</strong>
+                                        <ul>
+                                            <li>Email: <strong>security@[company].com</strong></li>
+                                            <li>Slack: <strong>#security-reports</strong> channel</li>
+                                            <li>For phishing: Use the "Report Phishing" button in your email client</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h4>When to Report</h4>
+                                <p><strong>Immediately.</strong> Don't wait. Don't investigate on your own. Don't try to "confirm" it first. Time matters in security incidents.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>No Blame Culture:</strong> We reward reporting, even if it turns out to be nothing. It's always better to report and be wrong than to not report an actual incident.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'content',
+                            title: 'Incident Response: What Happens Next',
+                            content: `
+                                <p>When you report an incident, here's what happens:</p>
+
+                                <h4>1. Triage (0-15 minutes)</h4>
+                                <p>Security team assesses the severity and determines if it's a real incident.</p>
+
+                                <h4>2. Containment (15 min - 1 hour)</h4>
+                                <p>Stop the incident from spreading. This may include:</p>
+                                <ul>
+                                    <li>Disabling compromised accounts</li>
+                                    <li>Isolating affected systems</li>
+                                    <li>Blocking malicious IPs or domains</li>
+                                </ul>
+
+                                <h4>3. Investigation (Hours - Days)</h4>
+                                <p>Determine what happened, what was affected, and how.</p>
+
+                                <h4>4. Recovery (Varies)</h4>
+                                <p>Restore normal operations and fix vulnerabilities.</p>
+
+                                <h4>5. Post-Incident Review</h4>
+                                <p>Learn from the incident and improve defenses.</p>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>If You're Asked to Help:</strong>
+                                        <ul>
+                                            <li>Follow security team instructions exactly</li>
+                                            <li>Don't share incident details outside approved channels</li>
+                                            <li>Preserve evidence (don't delete emails, logs, etc.)</li>
+                                            <li>Be honest about what happened</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Computer Security Incident Handling Guide',
+                                    url: 'https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final',
+                                    org: 'NIST SP 800-61'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Suspicious Email',
+                            context: 'You receive an email that appears to be from your CEO asking you to urgently purchase $500 in gift cards and send the codes. The email address looks correct at first glance, but the writing style seems slightly off.',
+                            choices: [
+                                {
+                                    text: 'Purchase the gift cards—the CEO must need them urgently',
+                                    correct: false,
+                                    feedback: 'This is a classic "CEO fraud" or "business email compromise" attack. Executives never ask employees to buy gift cards via email. This is always a scam.'
+                                },
+                                {
+                                    text: 'Reply to the email to ask for more details',
+                                    correct: false,
+                                    feedback: 'If the email is spoofed, your reply goes to the attacker. Never reply to suspicious emails to verify them.'
+                                },
+                                {
+                                    text: 'Contact the CEO through a different channel (Slack, phone) to verify, and report the email to security',
+                                    correct: true,
+                                    feedback: 'Correct! Always verify unusual requests through a separate, trusted channel. And report the email to security so they can warn others and block the attack.'
+                                },
+                                {
+                                    text: 'Check the email header to investigate yourself',
+                                    correct: false,
+                                    feedback: 'While checking headers can be helpful, your primary action should be to report it and verify through another channel. Leave the investigation to the security team.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: Staying Compliant
+                // ========================================
+                {
+                    title: 'Staying Compliant',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Change Management',
+                            content: `
+                                <p>Changes to systems are a major source of SOC 2 findings. All changes must follow our change management process.</p>
+
+                                <h4>What Requires Change Management?</h4>
+                                <ul>
+                                    <li>Changes to production systems</li>
+                                    <li>New software installations</li>
+                                    <li>Configuration changes</li>
+                                    <li>Access permission changes</li>
+                                    <li>Network changes</li>
+                                </ul>
+
+                                <h4>The Change Process</h4>
+                                <ol>
+                                    <li><strong>Request:</strong> Submit a change request ticket</li>
+                                    <li><strong>Review:</strong> Peers review the change</li>
+                                    <li><strong>Approve:</strong> Manager/security approves</li>
+                                    <li><strong>Test:</strong> Test in non-production first</li>
+                                    <li><strong>Deploy:</strong> Implement during approved windows</li>
+                                    <li><strong>Document:</strong> Record what was changed</li>
+                                </ol>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">🚫</span>
+                                    <div>
+                                        <strong>Never:</strong> Make "emergency" changes without documentation. Even urgent changes need to be logged and approved (even if retroactively for true emergencies).
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Change Management Controls',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA Trust Services Criteria'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Documentation & Audit Trails',
+                            content: `
+                                <p>SOC 2 auditors will ask: "Prove it." If we can't show evidence that controls are working, we fail the audit.</p>
+
+                                <h4>What Gets Audited</h4>
+                                <ul>
+                                    <li>Access requests and approvals</li>
+                                    <li>Change management tickets</li>
+                                    <li>Security training completion</li>
+                                    <li>Incident reports and responses</li>
+                                    <li>System logs and monitoring</li>
+                                    <li>Policy acknowledgments</li>
+                                </ul>
+
+                                <h4>Your Documentation Responsibilities</h4>
+                                <ul>
+                                    <li><strong>Complete tickets:</strong> Don't leave change requests or access requests undocumented</li>
+                                    <li><strong>Be accurate:</strong> Document what actually happened, when</li>
+                                    <li><strong>Be timely:</strong> Document things as they happen, not weeks later</li>
+                                    <li><strong>Sign policies:</strong> Acknowledge company policies when required</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Audit Tip:</strong> If you're ever asked for information by an auditor, work with your manager and the compliance team—don't respond directly.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'A SOC 2 auditor asks you directly for documentation about a system change you made last month. What should you do?',
+                            options: [
+                                'Provide them with all the documentation you have immediately',
+                                'Tell them you can\'t share that information',
+                                'Direct them to your manager or the compliance team',
+                                'Create the documentation they\'re asking for'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'All auditor communications should go through proper channels (your manager or compliance team). They can ensure the auditor receives accurate, appropriate information and that requests are properly tracked.'
+                        },
+                        {
+                            type: 'content',
+                            title: 'Vendor & Third-Party Risk',
+                            content: `
+                                <p>Our SOC 2 compliance extends to the vendors and tools we use. A security failure at a vendor is a security failure for us.</p>
+
+                                <h4>Before Using New Tools</h4>
+                                <ul>
+                                    <li>Get approval from IT/Security before using new software or SaaS tools</li>
+                                    <li>Don't sign up for tools using your work email without approval</li>
+                                    <li>Don't connect unapproved integrations to company systems</li>
+                                </ul>
+
+                                <h4>Working With Vendors</h4>
+                                <ul>
+                                    <li>Only share the minimum data necessary</li>
+                                    <li>Use approved secure methods for data transfer</li>
+                                    <li>Report any security concerns about vendors to security team</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Shadow IT:</strong> Using unapproved software ("shadow IT") is a significant compliance risk. If you need a tool that's not approved, submit a request—don't just sign up anyway.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Vendor Management in SOC 2',
+                                    url: 'https://www.aicpa-cima.com/resources/article/2017-trust-services-criteria',
+                                    org: 'AICPA'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. SOC 2 is about trust</strong><br>
+                                It proves to customers that we can be trusted with their data.</p>
+
+                                <p><strong>2. Five Trust Services Criteria</strong><br>
+                                Security (required), Availability, Processing Integrity, Confidentiality, and Privacy.</p>
+
+                                <p><strong>3. Everyone is responsible</strong><br>
+                                Your daily actions directly impact our compliance status.</p>
+
+                                <p><strong>4. Protect your credentials</strong><br>
+                                Strong passwords, MFA, and never share access.</p>
+
+                                <p><strong>5. Handle data carefully</strong><br>
+                                Classify it, protect it, and only use approved systems.</p>
+
+                                <p><strong>6. Report everything</strong><br>
+                                When in doubt, report. We have a no-blame culture.</p>
+
+                                <p><strong>7. Follow processes</strong><br>
+                                Change management, documentation, and approvals matter.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">🎯</span>
+                                    <div>
+                                        <strong>Remember:</strong> SOC 2 compliance isn't a one-time thing—it's how we operate every day. Your vigilance protects our customers, our company, and your colleagues.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing SOC 2 Compliance Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
