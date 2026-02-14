@@ -27,7 +27,7 @@ Corporate SaaS companies in Canada, US, and EU
 | # | Course | Why It Prints Money | Regions | Status |
 |---|--------|---------------------|---------|--------|
 | 11 | **Anti-Bribery & Corruption (FCPA/UK Bribery Act)** | Required for global companies | US/EU | ✅ COMPLETE |
-| 12 | **Insider Trading & Securities** | Public companies + pre-IPO | US/CA |
+| 12 | **Insider Trading & Securities** | Public companies + pre-IPO | US/CA | ✅ COMPLETE |
 | 13 | **Export Controls & Sanctions** | Tech companies with global users | US/EU |
 | 14 | **Accessibility (ADA/AODA/WCAG)** | Legal requirement, often overlooked | US/CA/EU |
 | 15 | **Information Security (ISO 27001)** | Pairs with SOC 2 | US/CA/EU |

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider Trading & Securities Compliance | Obsero</title>
+    <meta name="description" content="Learn insider trading laws, material non-public information rules, trading windows, and securities compliance requirements.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+    <div class="course-container">
+        <header class="course-header">
+            <div class="course-logo">
+                <div class="course-logo-icon">O</div>
+                <div>
+                    <span>Obsero</span>
+                    <div class="course-title">Insider Trading & Securities</div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </header>
+
+        <aside class="course-sidebar">
+            <div class="sidebar-header">
+                <h3>Course Modules</h3>
+            </div>
+            <nav class="module-list"></nav>
+        </aside>
+
+        <main class="course-main">
+            <div class="module-header"></div>
+            <div class="content-area"></div>
+        </main>
+
+        <footer class="course-footer">
+            <button class="btn btn-prev" disabled>← Previous</button>
+            <button class="btn btn-next">Continue →</button>
+        </footer>
+    </div>
+
+    <script src="js/scormAPI.js"></script>
+    <script src="js/course.js"></script>
+    <script>
+        course = new ObseroCourse({
+            courseId: 'insider-trading',
+            courseTitle: 'Insider Trading & Securities Compliance',
+            passingScore: 80,
+            modules: [
+                // ========================================
+                // MODULE 1: Understanding Insider Trading
+                // ========================================
+                {
+                    title: 'Understanding Insider Trading',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Welcome to Securities Compliance Training',
+                            content: `
+                                <p>This course covers insider trading laws and your responsibilities when you have access to non-public company information.</p>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏱️</span>
+                                    <div>
+                                        <strong>Estimated Time:</strong> 30 minutes<br>
+                                        <strong>Modules:</strong> 5 modules with knowledge checks
+                                    </div>
+                                </div>
+
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>What insider trading is and why it's illegal</li>
+                                    <li>What constitutes Material Non-Public Information (MNPI)</li>
+                                    <li>Trading windows and blackout periods</li>
+                                    <li>"Tipping" violations</li>
+                                    <li>Pre-clearance and reporting requirements</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Serious Consequences:</strong> Insider trading is a federal crime. Penalties include prison time up to 20 years, fines up to $5 million for individuals, and permanent career damage.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SEC Insider Trading',
+                                    url: 'https://www.sec.gov/about/what-we-do/insider-trading',
+                                    org: 'U.S. Securities and Exchange Commission'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'What is Insider Trading?',
+                            content: `
+                                <p><strong>Insider trading</strong> is buying or selling securities based on material information that isn't available to the public. It gives the trader an unfair advantage over other investors.</p>
+
+                                <h4>Why is it Illegal?</h4>
+                                <ul>
+                                    <li><strong>Unfair advantage:</strong> Insiders profit at the expense of uninformed investors</li>
+                                    <li><strong>Market integrity:</strong> Undermines trust in fair markets</li>
+                                    <li><strong>Theft of information:</strong> MNPI belongs to the company, not individuals</li>
+                                </ul>
+
+                                <h4>Who is an "Insider"?</h4>
+                                <p>Anyone with access to MNPI can be an insider:</p>
+                                <ul>
+                                    <li>Directors, officers, and executives</li>
+                                    <li>Employees at any level</li>
+                                    <li>Contractors and consultants</li>
+                                    <li>Lawyers, accountants, investment bankers</li>
+                                    <li>Family members and friends who receive tips</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>Key Point:</strong> You don't have to be a senior executive to violate insider trading laws. Anyone with access to MNPI—including administrative staff, IT workers, or contractors—can be held liable.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SEC Rule 10b-5',
+                                    url: 'https://www.sec.gov/about/what-we-do/insider-trading',
+                                    org: 'U.S. Securities and Exchange Commission'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'The Legal Framework',
+                            content: `
+                                <h4>Key U.S. Laws</h4>
+
+                                <p><strong>Securities Exchange Act of 1934</strong></p>
+                                <ul>
+                                    <li>Section 10(b) and Rule 10b-5: Prohibits fraud in securities transactions</li>
+                                    <li>Basis for most insider trading prosecutions</li>
+                                </ul>
+
+                                <p><strong>Insider Trading Sanctions Act (1984)</strong></p>
+                                <ul>
+                                    <li>Allows SEC to seek civil penalties up to 3x profits gained or losses avoided</li>
+                                </ul>
+
+                                <p><strong>Insider Trading and Securities Fraud Enforcement Act (1988)</strong></p>
+                                <ul>
+                                    <li>Created "controlling person" liability for firms</li>
+                                    <li>Increased criminal penalties</li>
+                                </ul>
+
+                                <h4>Canadian Laws</h4>
+                                <ul>
+                                    <li>Provincial securities acts prohibit insider trading</li>
+                                    <li>Criminal Code Section 382.1 for serious cases</li>
+                                    <li>Penalties up to 10 years imprisonment</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">⚖️</span>
+                                    <div>
+                                        <strong>Penalties (US):</strong>
+                                        <ul>
+                                            <li>Up to 20 years in prison</li>
+                                            <li>Up to $5 million in fines (individuals)</li>
+                                            <li>Up to $25 million in fines (companies)</li>
+                                            <li>Civil penalties up to 3x profits</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Insider Trading Laws',
+                                    url: 'https://www.sec.gov/about/what-we-do/insider-trading',
+                                    org: 'SEC'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Who can be prosecuted for insider trading?',
+                            options: [
+                                'Only senior executives like CEOs and CFOs',
+                                'Only employees who directly access financial systems',
+                                'Anyone who trades on material non-public information, including friends and family who receive tips',
+                                'Only the person who originally leaked the information'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'Anyone can be prosecuted for insider trading if they trade on MNPI. This includes employees at any level, contractors, and even family members or friends who receive tips. Both the tipper and the person who trades can be held liable.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 2: Material Non-Public Information
+                // ========================================
+                {
+                    title: 'Material Non-Public Information',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'What is MNPI?',
+                            content: `
+                                <p><strong>Material Non-Public Information (MNPI)</strong> is information that:</p>
+                                <ol>
+                                    <li><strong>Material:</strong> Would likely affect an investor's decision to buy or sell</li>
+                                    <li><strong>Non-Public:</strong> Not yet released to the general public</li>
+                                </ol>
+
+                                <h4>The "Reasonable Investor" Test</h4>
+                                <p>Information is material if a reasonable investor would consider it important when making investment decisions. Ask yourself:</p>
+                                <ul>
+                                    <li>Would this information affect the stock price?</li>
+                                    <li>Would a reasonable investor want to know this?</li>
+                                </ul>
+
+                                <h4>When is Information "Public"?</h4>
+                                <p>Information becomes public when it has been:</p>
+                                <ul>
+                                    <li>Disclosed through official channels (SEC filings, press releases)</li>
+                                    <li>Widely disseminated to investors</li>
+                                    <li>Given time to be absorbed by the market (typically 24-48 hours)</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Not Public Yet:</strong> Information shared at a conference, in analyst meetings, or posted on social media may not be sufficiently "public." Wait for official disclosure through proper channels.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Materiality Standard',
+                                    url: 'https://www.sec.gov/about/what-we-do/insider-trading',
+                                    org: 'SEC'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Examples of MNPI',
+                            content: `
+                                <h4>Typically Material Information</h4>
+                                <ul>
+                                    <li><strong>Financial results:</strong> Earnings, revenue, losses</li>
+                                    <li><strong>Mergers & acquisitions:</strong> Deals, negotiations, offers</li>
+                                    <li><strong>Major contracts:</strong> Wins or losses of significant business</li>
+                                    <li><strong>Management changes:</strong> CEO departures, executive changes</li>
+                                    <li><strong>Regulatory actions:</strong> FDA approvals, legal settlements</li>
+                                    <li><strong>Product issues:</strong> Recalls, major defects</li>
+                                    <li><strong>Restructuring:</strong> Layoffs, facility closures</li>
+                                    <li><strong>Financing:</strong> New debt, equity offerings, dividend changes</li>
+                                    <li><strong>Cybersecurity:</strong> Major breaches or incidents</li>
+                                </ul>
+
+                                <h4>Less Obvious MNPI</h4>
+                                <ul>
+                                    <li>Preliminary earnings discussions</li>
+                                    <li>Pipeline data for pharma/biotech</li>
+                                    <li>Customer concentration issues</li>
+                                    <li>Supply chain disruptions</li>
+                                    <li>Internal investigations</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💡</span>
+                                    <div>
+                                        <strong>When in Doubt:</strong> If you're unsure whether information is material, assume it is. Consult with Legal or Compliance before trading.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Overheard Information',
+                            context: 'While working late, you overhear two executives in the hallway discussing that the company will announce a major acquisition next week—the stock will likely jump 30%. You own company stock and were planning to buy more anyway.',
+                            choices: [
+                                {
+                                    text: 'Buy more stock as planned—you were going to do it anyway',
+                                    correct: false,
+                                    feedback: 'Your intent before receiving MNPI doesn\'t matter. Once you have material non-public information, you cannot trade until it becomes public. Trading now would be insider trading.'
+                                },
+                                {
+                                    text: 'Wait until the announcement, then buy stock immediately',
+                                    correct: false,
+                                    feedback: 'You need to wait not just for the announcement, but for the information to be absorbed by the market (typically 24-48 hours after official public disclosure). Buying immediately after announcement could still be problematic.'
+                                },
+                                {
+                                    text: 'Don\'t trade until the information is publicly announced AND absorbed by the market',
+                                    correct: true,
+                                    feedback: 'Correct! You must wait until the information is officially disclosed and the market has had time to absorb it (typically 24-48 hours). Then you can trade freely.'
+                                },
+                                {
+                                    text: 'Sell your existing stock to avoid any issues',
+                                    correct: false,
+                                    feedback: 'Selling is also trading! You cannot sell your stock based on MNPI any more than you can buy. In this case, selling before good news would actually hurt you financially, but selling to avoid association would still be problematic.'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'Your company\'s CEO resigns unexpectedly. When can you trade company stock?',
+                            options: [
+                                'Immediately—CEO changes aren\'t material',
+                                'After the press release is issued',
+                                'After the press release AND the market has had time to absorb the news',
+                                'You can never trade company stock after learning about executive changes'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'CEO changes are typically material information. You must wait until the information is publicly announced (press release, SEC filing) AND the market has had time to absorb it—usually 24-48 hours. Then you can trade freely.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 3: Tipping Violations
+                // ========================================
+                {
+                    title: 'Tipping Violations',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'What is Tipping?',
+                            content: `
+                                <p><strong>Tipping</strong> is sharing material non-public information with someone who then trades on it. Both the tipper and the person who receives the tip ("tippee") can be liable.</p>
+
+                                <h4>Elements of Tipping Liability</h4>
+                                <ol>
+                                    <li>The tipper shared MNPI</li>
+                                    <li>The tipper received some "benefit" (even indirect)</li>
+                                    <li>The tippee knew or should have known the info was MNPI</li>
+                                    <li>The tippee traded or passed the tip to someone who traded</li>
+                                </ol>
+
+                                <h4>What Counts as a "Benefit"?</h4>
+                                <p>The benefit doesn't have to be money:</p>
+                                <ul>
+                                    <li>Friendship and desire to help</li>
+                                    <li>Gifts or favors</li>
+                                    <li>Reputation or career advancement</li>
+                                    <li>Reciprocal tip expected later</li>
+                                    <li>Family relationships</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">⚠️</span>
+                                    <div>
+                                        <strong>Family & Friends:</strong> Tipping family members or close friends is particularly risky. Courts have found that sharing MNPI with close relationships implies a benefit to the tipper.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SEC Tipping Liability',
+                                    url: 'https://www.sec.gov/about/what-we-do/insider-trading',
+                                    org: 'SEC'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Protecting Confidential Information',
+                            content: `
+                                <h4>Do's</h4>
+                                <ul>
+                                    <li>Keep MNPI strictly confidential</li>
+                                    <li>Share MNPI only with those who have a business need-to-know</li>
+                                    <li>Use code names for sensitive projects</li>
+                                    <li>Secure documents and electronic files</li>
+                                    <li>Be careful in public places (airports, restaurants)</li>
+                                </ul>
+
+                                <h4>Don'ts</h4>
+                                <ul>
+                                    <li>Discuss MNPI with family or friends</li>
+                                    <li>Talk about confidential matters in public</li>
+                                    <li>Leave sensitive documents visible</li>
+                                    <li>Use unsecured communication for MNPI</li>
+                                    <li>Hint or brag about upcoming announcements</li>
+                                </ul>
+
+                                <h4>Common Tipping Scenarios</h4>
+                                <ul>
+                                    <li>Casually mentioning "big news coming" to a friend</li>
+                                    <li>Advising a spouse to "wait before selling"</li>
+                                    <li>Discussing work at a family dinner</li>
+                                    <li>Sharing excitement about an upcoming deal</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">🤐</span>
+                                    <div>
+                                        <strong>The Safe Rule:</strong> Don't discuss anything about your company's non-public business with anyone outside of work—period. Not hints, not vague references, nothing.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'simulation',
+                            scenario: 'Family Dinner Conversation',
+                            context: 'At a family dinner, your brother mentions he\'s thinking about buying stock in your company. You know (but can\'t share) that the company will announce disappointing earnings next week. He asks, "Is now a good time to buy?"',
+                            choices: [
+                                {
+                                    text: 'Tell him to wait a couple weeks without explaining why',
+                                    correct: false,
+                                    feedback: 'Even vague advice not to buy "right now" based on MNPI is tipping. You\'re signaling that you know something negative is coming, which he can act on.'
+                                },
+                                {
+                                    text: 'Say "I can\'t give you advice about company stock" and change the subject',
+                                    correct: true,
+                                    feedback: 'Correct! The safest response is to clearly state you cannot give advice about company stock—period. Don\'t hint, don\'t suggest timing, just decline to discuss it at all.'
+                                },
+                                {
+                                    text: 'Tell him earnings will be bad so he shouldn\'t buy',
+                                    correct: false,
+                                    feedback: 'This is explicit tipping of MNPI. Even though you\'re trying to protect your brother, you would both be liable—you for tipping, and him for trading on the information.'
+                                },
+                                {
+                                    text: 'Say "I think the company is doing great" to not arouse suspicion',
+                                    correct: false,
+                                    feedback: 'Making false positive statements about the company when you know otherwise could also create liability. The right approach is to simply refuse to discuss it.'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 4: Trading Policies & Procedures
+                // ========================================
+                {
+                    title: 'Trading Policies & Procedures',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Trading Windows & Blackout Periods',
+                            content: `
+                                <h4>What is a Blackout Period?</h4>
+                                <p>A <strong>blackout period</strong> is a time when certain employees are prohibited from trading company securities—typically around earnings announcements.</p>
+
+                                <h4>Typical Blackout Schedule</h4>
+                                <ul>
+                                    <li>Begins 2-4 weeks before quarter end</li>
+                                    <li>Extends until 24-48 hours after earnings release</li>
+                                    <li>May apply to additional events (M&A, restructurings)</li>
+                                </ul>
+
+                                <h4>Trading Windows</h4>
+                                <p><strong>Open windows</strong> are periods when trading is generally permitted (subject to pre-clearance if required). Typically:</p>
+                                <ul>
+                                    <li>Opens after earnings are released and absorbed</li>
+                                    <li>Closes when the next blackout begins</li>
+                                </ul>
+
+                                <h4>Who is Subject to Blackouts?</h4>
+                                <ul>
+                                    <li>Directors and officers (always)</li>
+                                    <li>Finance and accounting personnel</li>
+                                    <li>Anyone with regular access to financial information</li>
+                                    <li>Others as designated by company policy</li>
+                                </ul>
+
+                                <div class="callout warning">
+                                    <span class="callout-icon">📅</span>
+                                    <div>
+                                        <strong>Know Your Status:</strong> Check with Legal or HR whether you're subject to blackout periods. The restrictions may apply even if you don't think you have access to MNPI.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'content',
+                            title: 'Pre-Clearance Requirements',
+                            content: `
+                                <h4>What is Pre-Clearance?</h4>
+                                <p>Pre-clearance requires certain employees to get approval before trading company securities.</p>
+
+                                <h4>Who Typically Needs Pre-Clearance?</h4>
+                                <ul>
+                                    <li>Directors and officers</li>
+                                    <li>Senior management</li>
+                                    <li>Designated employees (varies by company)</li>
+                                    <li>Sometimes family members of the above</li>
+                                </ul>
+
+                                <h4>Pre-Clearance Process</h4>
+                                <ol>
+                                    <li>Submit pre-clearance request before trading</li>
+                                    <li>Wait for approval (don't trade until approved)</li>
+                                    <li>Complete trade within approval window (typically 2-5 days)</li>
+                                    <li>Report completed transactions if required</li>
+                                </ol>
+
+                                <h4>What Requires Pre-Clearance?</h4>
+                                <ul>
+                                    <li>Buying company stock</li>
+                                    <li>Selling company stock</li>
+                                    <li>Options exercises</li>
+                                    <li>Gifts of stock</li>
+                                    <li>Hedging transactions (usually prohibited)</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">⏰</span>
+                                    <div>
+                                        <strong>Approval Expiration:</strong> Pre-clearance approval is typically valid for only 2-5 business days. If you don't complete the trade in that window, you must request approval again.
+                                    </div>
+                                </div>
+                            `
+                        },
+                        {
+                            type: 'content',
+                            title: 'Section 16 Reporting (Officers & Directors)',
+                            content: `
+                                <h4>Who is a Section 16 Insider?</h4>
+                                <ul>
+                                    <li>Directors</li>
+                                    <li>Officers (CEO, CFO, CAO, and other designated officers)</li>
+                                    <li>Shareholders owning more than 10%</li>
+                                </ul>
+
+                                <h4>Reporting Requirements</h4>
+
+                                <p><strong>Form 3: Initial Statement</strong></p>
+                                <ul>
+                                    <li>Filed within 10 days of becoming an insider</li>
+                                    <li>Reports all company securities owned</li>
+                                </ul>
+
+                                <p><strong>Form 4: Changes in Ownership</strong></p>
+                                <ul>
+                                    <li>Filed within 2 business days of a transaction</li>
+                                    <li>Reports purchases, sales, options exercises</li>
+                                </ul>
+
+                                <p><strong>Form 5: Annual Statement</strong></p>
+                                <ul>
+                                    <li>Filed within 45 days of fiscal year end</li>
+                                    <li>Reports transactions not previously filed</li>
+                                </ul>
+
+                                <div class="callout error">
+                                    <span class="callout-icon">⚡</span>
+                                    <div>
+                                        <strong>2 Business Days:</strong> Form 4 must be filed within 2 business days of a transaction. Late filings are disclosed and can be embarrassing. Work with your company to ensure timely filing.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Section 16 Reporting',
+                                    url: 'https://www.sec.gov/divisions/corpfin/guidance/sec16-overview',
+                                    org: 'SEC'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'quiz',
+                            question: 'You receive pre-clearance to sell company stock on Monday. When must you complete the trade?',
+                            options: [
+                                'Within the next fiscal quarter',
+                                'Within 30 days',
+                                'Within the approval window (typically 2-5 business days)',
+                                'Anytime—pre-clearance doesn\'t expire'
+                            ],
+                            correctAnswer: 2,
+                            explanation: 'Pre-clearance approval typically expires within 2-5 business days. If you don\'t complete the trade in that window, you must request pre-clearance again. This ensures the company can verify you don\'t have current MNPI.'
+                        }
+                    ]
+                },
+                // ========================================
+                // MODULE 5: Your Responsibilities
+                // ========================================
+                {
+                    title: 'Your Responsibilities',
+                    slides: [
+                        {
+                            type: 'content',
+                            title: 'Personal Trading Guidelines',
+                            content: `
+                                <h4>Before You Trade</h4>
+                                <ul>
+                                    <li>Confirm you're not in a blackout period</li>
+                                    <li>Check if you have any MNPI</li>
+                                    <li>Obtain pre-clearance if required</li>
+                                    <li>Review company trading policy</li>
+                                </ul>
+
+                                <h4>What's Typically Prohibited</h4>
+                                <ul>
+                                    <li>Short selling company stock</li>
+                                    <li>Hedging company stock positions</li>
+                                    <li>Trading during blackout periods</li>
+                                    <li>Trading while in possession of MNPI</li>
+                                    <li>Speculative trading in company securities</li>
+                                </ul>
+
+                                <h4>10b5-1 Trading Plans</h4>
+                                <p>A 10b5-1 plan allows insiders to set up predetermined trading instructions when they don't have MNPI:</p>
+                                <ul>
+                                    <li>Must be established in good faith</li>
+                                    <li>Specifies dates, prices, and amounts in advance</li>
+                                    <li>Must not be modified while possessing MNPI</li>
+                                    <li>Provides a defense against insider trading claims</li>
+                                </ul>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">✅</span>
+                                    <div>
+                                        <strong>Best Practice:</strong> If you're an executive or trade frequently, consider setting up a 10b5-1 plan. It allows you to trade on a predetermined schedule without worrying about MNPI.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'Rule 10b5-1 Trading Plans',
+                                    url: 'https://www.sec.gov/rules/final/2022/33-11138.pdf',
+                                    org: 'SEC'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Reporting Concerns',
+                            content: `
+                                <h4>What to Report</h4>
+                                <ul>
+                                    <li>Suspected insider trading by others</li>
+                                    <li>Unusual trading activity around announcements</li>
+                                    <li>Colleagues sharing MNPI inappropriately</li>
+                                    <li>Requests for confidential information</li>
+                                    <li>Pressure to trade or share information</li>
+                                </ul>
+
+                                <h4>How to Report</h4>
+                                <ul>
+                                    <li>Contact Legal or Compliance department</li>
+                                    <li>Use company ethics hotline</li>
+                                    <li>Report to SEC (whistleblower program available)</li>
+                                </ul>
+
+                                <h4>SEC Whistleblower Program</h4>
+                                <ul>
+                                    <li>Awards of 10-30% of sanctions over $1 million</li>
+                                    <li>Anti-retaliation protections</li>
+                                    <li>Can report anonymously through an attorney</li>
+                                </ul>
+
+                                <div class="callout info">
+                                    <span class="callout-icon">💰</span>
+                                    <div>
+                                        <strong>Whistleblower Awards:</strong> The SEC has paid over $1 billion to whistleblowers. Individual awards have exceeded $100 million. There are real incentives to report violations.
+                                    </div>
+                                </div>
+                            `,
+                            sources: [
+                                {
+                                    title: 'SEC Whistleblower Program',
+                                    url: 'https://www.sec.gov/whistleblower',
+                                    org: 'SEC'
+                                }
+                            ]
+                        },
+                        {
+                            type: 'content',
+                            title: 'Course Summary',
+                            content: `
+                                <h4>Key Takeaways</h4>
+
+                                <p><strong>1. Don't trade on MNPI</strong><br>
+                                If you have material non-public information, don't trade until it's public and absorbed.</p>
+
+                                <p><strong>2. Don't tip others</strong><br>
+                                Never share MNPI with family, friends, or anyone without a business need-to-know.</p>
+
+                                <p><strong>3. Respect blackout periods</strong><br>
+                                Know when you can and can't trade company securities.</p>
+
+                                <p><strong>4. Get pre-clearance when required</strong><br>
+                                Follow company procedures before trading.</p>
+
+                                <p><strong>5. When in doubt, don't trade</strong><br>
+                                Consult Legal or Compliance before trading if you have any concerns.</p>
+
+                                <p><strong>6. Report violations</strong><br>
+                                Protect the company and yourself by reporting suspected violations.</p>
+
+                                <div class="callout success">
+                                    <span class="callout-icon">📈</span>
+                                    <div>
+                                        <strong>Remember:</strong> Insider trading laws exist to ensure fair markets. Following these rules protects investors, your company, and your career. The consequences of violations are severe and career-ending.
+                                    </div>
+                                </div>
+
+                                <p style="text-align: center; margin-top: 30px;">
+                                    <strong>Thank you for completing Insider Trading & Securities Compliance Training!</strong><br>
+                                    Click "Complete Course" to finish and receive your certificate.
+                                </p>
+                            `
+                        }
+                    ]
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
